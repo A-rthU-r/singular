@@ -1,386 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Square - Free Bootstrap 4 Template by Colorlib</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900" rel="stylesheet">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Insights — The Singular</title>
+<meta name="description" content="Read the latest insights on IoT, AI, private 5G networks, and digital transformation from The Singular team."/>
+<link rel="stylesheet" href="css/main.css"/>
+<style>
+/* ── ARTICLE LAYOUT ── */
+.article-wrap{max-width:1200px;margin:0 auto;padding:80px 24px;display:grid;grid-template-columns:1fr 340px;gap:64px;align-items:start}
+/* Main article */
+.article-main{}
+.article-meta{display:flex;align-items:center;gap:12px;margin-bottom:24px;flex-wrap:wrap}
+.article-tag{font-family:'Syne',sans-serif;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#3B82F6;background:#EFF6FF;padding:4px 12px;border-radius:100px}
+.article-date{font-size:13px;color:#9CA3AF}
+.article-author{font-size:13px;color:#9CA3AF}
+.article-main h1{font-family:'Syne',sans-serif;font-size:clamp(28px,4vw,48px);font-weight:800;color:#0D1117;line-height:1.1;letter-spacing:-.025em;margin-bottom:24px}
+.article-hero{width:100%;height:420px;object-fit:cover;border-radius:16px;margin-bottom:40px;display:block;background:linear-gradient(135deg,#0A1628,#1D4ED8)}
+.article-hero-ph{width:100%;height:420px;border-radius:16px;margin-bottom:40px;background:linear-gradient(135deg,#0A1628,#1D4ED8);display:flex;align-items:center;justify-content:center}
+.article-hero-ph svg{width:60px;height:60px;stroke:rgba(255,255,255,.2);fill:none;stroke-width:1.5}
+.article-body{font-size:17px;color:#374151;line-height:1.85;font-weight:300}
+.article-body h2{font-family:'Syne',sans-serif;font-size:26px;font-weight:800;color:#0D1117;line-height:1.2;margin:44px 0 16px;letter-spacing:-.015em}
+.article-body h3{font-family:'Syne',sans-serif;font-size:20px;font-weight:700;color:#0D1117;margin:32px 0 12px}
+.article-body p{margin-bottom:20px}
+.article-body ul,.article-body ol{margin:0 0 20px 24px}
+.article-body li{margin-bottom:8px}
+.article-body blockquote{border-left:4px solid #3B82F6;padding:16px 24px;margin:32px 0;background:#EFF6FF;border-radius:0 8px 8px 0}
+.article-body blockquote p{color:#1D4ED8;font-weight:400;margin:0;font-style:italic}
+.article-share{margin-top:48px;padding-top:32px;border-top:1px solid #E4E7EC;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.article-share span{font-family:'Syne',sans-serif;font-size:13px;font-weight:700;color:#0D1117;text-transform:uppercase;letter-spacing:.05em}
+.share-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border:1px solid #E4E7EC;border-radius:8px;font-family:'Syne',sans-serif;font-size:13px;font-weight:600;color:#4B5563;text-decoration:none;transition:all .25s}
+.share-btn:hover{border-color:#3B82F6;color:#3B82F6}
+.share-btn svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+/* Sidebar */
+.article-sidebar{}
+.sidebar-card{background:#F7F8FA;border:1px solid #E4E7EC;border-radius:12px;padding:28px;margin-bottom:24px}
+.sidebar-card h3{font-family:'Syne',sans-serif;font-size:14px;font-weight:700;color:#0D1117;text-transform:uppercase;letter-spacing:.06em;margin-bottom:20px}
+.related-post{display:flex;flex-direction:column;gap:4px;padding:14px 0;border-bottom:1px solid #E4E7EC;text-decoration:none;color:inherit;transition:color .25s}
+.related-post:last-child{border-bottom:none;padding-bottom:0}
+.related-post:hover h4{color:#3B82F6}
+.rp-tag{font-family:'Syne',sans-serif;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#3B82F6;margin-bottom:4px}
+.related-post h4{font-family:'Syne',sans-serif;font-size:14px;font-weight:700;color:#0D1117;line-height:1.4;transition:color .25s}
+.related-post span{font-size:12px;color:#9CA3AF}
+.cta-sidebar{background:linear-gradient(135deg,#0A1628,#0D2250);border-radius:12px;padding:28px;text-align:center}
+.cta-sidebar h3{font-family:'Syne',sans-serif;font-size:18px;font-weight:800;color:#fff;margin-bottom:10px}
+.cta-sidebar p{font-size:13px;color:rgba(255,255,255,.6);line-height:1.6;margin-bottom:20px}
+/* All Articles grid */
+.all-articles{background:#F7F8FA;padding:80px 24px}
+.articles-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
+.art-card{border:1px solid #E4E7EC;border-radius:12px;overflow:hidden;text-decoration:none;color:inherit;background:#fff;transition:all .25s}
+.art-card:hover{box-shadow:0 4px 16px rgba(0,0,0,.08);transform:translateY(-3px);border-color:rgba(59,130,246,.2)}
+.art-card-ph{width:100%;height:180px;background:linear-gradient(135deg,#0A1628,#1D4ED8);display:flex;align-items:center;justify-content:center}
+.art-card-ph svg{width:32px;height:32px;stroke:rgba(255,255,255,.25);fill:none;stroke-width:1.5}
+.art-card-body{padding:20px}
+.art-card-tag{font-family:'Syne',sans-serif;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#3B82F6;margin-bottom:8px;display:block}
+.art-card h3{font-family:'Syne',sans-serif;font-size:15px;font-weight:700;color:#0D1117;line-height:1.4;margin-bottom:8px}
+.art-card p{font-size:13px;color:#4B5563;line-height:1.6}
+.art-card-foot{padding:14px 20px;border-top:1px solid #E4E7EC;display:flex;justify-content:space-between;align-items:center}
+.art-card-author{font-size:12px;color:#9CA3AF}
+.art-card-read{font-family:'Syne',sans-serif;font-size:12px;font-weight:600;color:#3B82F6}
+@media(max-width:1024px){.article-wrap{grid-template-columns:1fr;gap:48px}.articles-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:768px){.articles-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
 
-    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="css/animate.css">
-    
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
+<nav id="ts-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="images/image008.png" alt="The Singular"/></a>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="index.html#industries">Industries</a></li>
+      <li><a href="index.html#why">Why Singular</a></li>
+      <li><a href="single.html" class="active">Insights</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="contact.html" class="nav-cta">Get In Touch</a></li>
+    </ul>
+    <button class="nav-burger" id="ts-burger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-nav" id="ts-mobile-nav">
+  <a href="about.html">About</a><a href="index.html#industries">Industries</a><a href="index.html#why">Why Singular</a><a href="single.html">Insights</a><a href="contact.html">Contact</a><a href="contact.html">Get In Touch →</a>
+</div>
 
-    <link rel="stylesheet" href="css/aos.css">
+<div class="page-hero" style="min-height:320px">
+  <div class="ph-bg"></div><div class="ph-glow"></div>
+  <div class="ph-inner">
+    <div class="breadcrumb"><a href="index.html">Home</a><span class="sep"> › </span><span class="cur">Insights</span></div>
+    <div class="ph-tag">Insights &amp; Research</div>
+    <h1>Relevant Stories, <span>Research &amp; Thinking</span></h1>
+    <p class="ph-sub">The latest on IoT, AI, private 5G, and digital transformation across the industries we serve.</p>
+  </div>
+</div>
 
-    <link rel="stylesheet" href="css/ionicons.min.css">
-
-    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
-    <link rel="stylesheet" href="css/jquery.timepicker.css">
-
-    
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/icomoon.css">
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
-	  
-    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-	    <div class="container">
-	      <a class="navbar-brand" href="index.html"><span>Square.</span></a>
-	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span> Menu
-	      </button>
-
-	      <div class="collapse navbar-collapse" id="">
-	        <ul class="navbar-nav nav ml-auto">
-	          <li class="nav-item"><a href="index.html" class="nav-link" data-nav-section="home"><span>Home</span></a></li>
-	          <li class="nav-item"><a href="index.html" class="nav-link" data-nav-section="about"><span>About</span></a></li>
-	          <li class="nav-item"><a href="index.html" class="nav-link" data-nav-section="projects"><span>Projects</span></a></li>
-	          <li class="nav-item"><a href="index.html" class="nav-link" data-nav-section="team"><span>Team</span></a></li>
-	          <li class="nav-item"><a href="index.html" class="nav-link" data-nav-section="testimony"><span>Testimony</span></a></li>
-	          <li class="nav-item"><a href="index.html" class="nav-link" data-nav-section="blog"><span>Blog</span></a></li>
-	          <li class="nav-item"><a href="index.html" class="nav-link" data-nav-section="contact"><span>Contact</span></a></li>
-	          <li class="nav-item cta"><a href="#" class="nav-link">Request a quote</a></li>
-
-	        </ul>
-	      </div>
-	    </div>
-	  </nav>
-    
-    <section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_2.jpg');" data-stellar-background-ratio="0.5">
-      <div class="overlay"></div>
-      <div class="container">
-        <div class="row no-gutters slider-text align-items-end justify-content-center">
-          <div class="col-md-9 ftco-animate pb-5 text-center">
-            <h1 class="mb-3 bread">Our Stories</h1>
-            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span class="mr-2"><a href="blog.html">Blog <i class="ion-ios-arrow-forward"></i></a></span> <span>Blog Single <i class="ion-ios-arrow-forward"></i></span></p>
-          </div>
-        </div>
+<!-- FEATURED ARTICLE -->
+<div style="background:#fff">
+  <div class="article-wrap">
+    <main class="article-main fu">
+      <div class="article-meta">
+        <span class="article-tag">IoT · Retail</span>
+        <span class="article-date">March 2026</span>
+        <span class="article-author">By Ryan Daws</span>
       </div>
-    </section>
-		
+      <h1>From Shelf to Sale: How IoT Solutions Keep Retail Fresh</h1>
+      <div class="article-hero-ph"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+      <div class="article-body">
+        <p>IoT solutions are providing the retail industry with powerful tools to navigate the challenges of modern commerce. From smart shelving that monitors stock levels in real time, to connected cold chain systems that ensure product freshness — the Internet of Things is fundamentally reshaping how retailers operate.</p>
 
-		<section class="ftco-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 order-lg-last ftco-animate">
-            <h2 class="mb-3">It is a long established fact a reader be distracted</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, eius mollitia suscipit, quisquam doloremque distinctio perferendis et doloribus unde architecto optio laboriosam porro adipisci sapiente officiis nemo accusamus ad praesentium? Esse minima nisi et. Dolore perferendis, enim praesentium omnis, iste doloremque quia officia optio deserunt molestiae voluptates soluta architecto tempora.</p>
-            <p>
-              <img src="images/image_6.jpg" alt="" class="img-fluid">
-            </p>
-            <p>Molestiae cupiditate inventore animi, maxime sapiente optio, illo est nemo veritatis repellat sunt doloribus nesciunt! Minima laborum magni reiciendis qui voluptate quisquam voluptatem soluta illo eum ullam incidunt rem assumenda eveniet eaque sequi deleniti tenetur dolore amet fugit perspiciatis ipsa, odit. Nesciunt dolor minima esse vero ut ea, repudiandae suscipit!</p>
-            <h2 class="mb-3 mt-5">#2. Creative WordPress Themes</h2>
-            <p>Temporibus ad error suscipit exercitationem hic molestiae totam obcaecati rerum, eius aut, in. Exercitationem atque quidem tempora maiores ex architecto voluptatum aut officia doloremque. Error dolore voluptas, omnis molestias odio dignissimos culpa ex earum nisi consequatur quos odit quasi repellat qui officiis reiciendis incidunt hic non? Debitis commodi aut, adipisci.</p>
-            <p>
-              <img src="images/image_4.jpg" alt="" class="img-fluid">
-            </p>
-            <p>Quisquam esse aliquam fuga distinctio, quidem delectus veritatis reiciendis. Nihil explicabo quod, est eos ipsum. Unde aut non tenetur tempore, nisi culpa voluptate maiores officiis quis vel ab consectetur suscipit veritatis nulla quos quia aspernatur perferendis, libero sint. Error, velit, porro. Deserunt minus, quibusdam iste enim veniam, modi rem maiores.</p>
-            <p>Odit voluptatibus, eveniet vel nihil cum ullam dolores laborum, quo velit commodi rerum eum quidem pariatur! Quia fuga iste tenetur, ipsa vel nisi in dolorum consequatur, veritatis porro explicabo soluta commodi libero voluptatem similique id quidem? Blanditiis voluptates aperiam non magni. Reprehenderit nobis odit inventore, quia laboriosam harum excepturi ea.</p>
-            <p>Adipisci vero culpa, eius nobis soluta. Dolore, maxime ullam ipsam quidem, dolor distinctio similique asperiores voluptas enim, exercitationem ratione aut adipisci modi quod quibusdam iusto, voluptates beatae iure nemo itaque laborum. Consequuntur et pariatur totam fuga eligendi vero dolorum provident. Voluptatibus, veritatis. Beatae numquam nam ab voluptatibus culpa, tenetur recusandae!</p>
-            <p>Voluptas dolores dignissimos dolorum temporibus, autem aliquam ducimus at officia adipisci quasi nemo a perspiciatis provident magni laboriosam repudiandae iure iusto commodi debitis est blanditiis alias laborum sint dolore. Dolores, iure, reprehenderit. Error provident, pariatur cupiditate soluta doloremque aut ratione. Harum voluptates mollitia illo minus praesentium, rerum ipsa debitis, inventore?</p>
-            <div class="tag-widget post-tag-container mb-5 mt-5">
-              <div class="tagcloud">
-                <a href="#" class="tag-cloud-link">Life</a>
-                <a href="#" class="tag-cloud-link">Sport</a>
-                <a href="#" class="tag-cloud-link">Tech</a>
-                <a href="#" class="tag-cloud-link">Travel</a>
-              </div>
-            </div>
-            
-            <div class="about-author d-flex p-4 bg-light">
-              <div class="bio mr-5">
-                <img src="images/person_1.jpg" alt="Image placeholder" class="img-fluid mb-4">
-              </div>
-              <div class="desc">
-                <h3>George Washington</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus itaque, autem necessitatibus voluptate quod mollitia delectus aut, sunt placeat nam vero culpa sapiente consectetur similique, inventore eos fugit cupiditate numquam!</p>
-              </div>
-            </div>
+        <h2>The Challenge of Modern Retail Operations</h2>
+        <p>Retailers face a unique combination of challenges: thin margins, demanding consumers, complex supply chains, and rapidly shifting demand patterns. Traditional approaches to inventory management, loss prevention, and customer experience are no longer sufficient in an era where digital-native competitors can adapt in hours rather than weeks.</p>
+        <p>The answer lies in connectivity — embedding intelligence into every touchpoint of the retail operation, from the distribution center to the shop floor.</p>
 
+        <blockquote><p>"The retailers winning today are those who treat their stores as intelligent systems, not static spaces. IoT is the enabler of that transformation."</p></blockquote>
 
-            <div class="pt-5 mt-5">
-              <h3 class="mb-5">6 Comments</h3>
-              <ul class="comment-list">
-                <li class="comment">
-                  <div class="vcard bio">
-                    <img src="images/person_1.jpg" alt="Image placeholder">
-                  </div>
-                  <div class="comment-body">
-                    <h3>John Doe</h3>
-                    <div class="meta">October 03, 2018 at 2:21pm</div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
-                    <p><a href="#" class="reply">Reply</a></p>
-                  </div>
-                </li>
+        <h2>Smart Shelving and Real-Time Inventory</h2>
+        <p>Weight-sensing smart shelves combined with computer vision cameras enable retailers to track product availability at the individual SKU level — in real time, without manual counts. When stock drops below a threshold, automated replenishment alerts are triggered, ensuring shelves are always full and customers always find what they need.</p>
+        <p>Beyond availability, these systems capture valuable behavioral data: which products are picked up and put back, dwell times, and traffic patterns — informing everything from shelf placement to promotional strategy.</p>
 
-                <li class="comment">
-                  <div class="vcard bio">
-                    <img src="images/person_1.jpg" alt="Image placeholder">
-                  </div>
-                  <div class="comment-body">
-                    <h3>John Doe</h3>
-                    <div class="meta">October 03, 2018 at 2:21pm</div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
-                    <p><a href="#" class="reply">Reply</a></p>
-                  </div>
+        <h2>Cold Chain Intelligence</h2>
+        <p>For food retailers and pharmacies, maintaining the cold chain is both a regulatory requirement and a brand promise. IoT temperature sensors deployed throughout refrigeration units, delivery vehicles, and storage areas provide continuous monitoring — with automated alerts when temperatures deviate from safe ranges.</p>
+        <p>The result is a dramatic reduction in spoilage, improved compliance, and real-time traceability from supplier to shelf.</p>
 
-                  <ul class="children">
-                    <li class="comment">
-                      <div class="vcard bio">
-                        <img src="images/person_1.jpg" alt="Image placeholder">
-                      </div>
-                      <div class="comment-body">
-                        <h3>John Doe</h3>
-                        <div class="meta">October 03, 2018 at 2:21pm</div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
-                        <p><a href="#" class="reply">Reply</a></p>
-                      </div>
+        <h2>The Role of Private 5G in Large-Format Retail</h2>
+        <p>Large retail environments — hypermarkets, logistics centers, shopping malls — require reliable, high-bandwidth connectivity across vast floor areas. Private 5G networks provide the foundation: consistent coverage, guaranteed bandwidth, and the security required to run autonomous systems alongside customer-facing applications on the same infrastructure.</p>
 
+        <h3>Key Takeaways</h3>
+        <ul>
+          <li>Real-time inventory visibility reduces stockouts and overstock simultaneously</li>
+          <li>Cold chain monitoring cuts spoilage by up to 30% while improving compliance</li>
+          <li>Behavioral analytics from IoT sensors inform smarter store layouts and promotions</li>
+          <li>Private 5G provides the reliable connectivity foundation for large-format retail IoT</li>
+        </ul>
 
-                      <ul class="children">
-                        <li class="comment">
-                          <div class="vcard bio">
-                            <img src="images/person_1.jpg" alt="Image placeholder">
-                          </div>
-                          <div class="comment-body">
-                            <h3>John Doe</h3>
-                            <div class="meta">October 03, 2018 at 2:21pm</div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
-                            <p><a href="#" class="reply">Reply</a></p>
-                          </div>
-
-                            <ul class="children">
-                              <li class="comment">
-                                <div class="vcard bio">
-                                  <img src="images/person_1.jpg" alt="Image placeholder">
-                                </div>
-                                <div class="comment-body">
-                                  <h3>John Doe</h3>
-                                  <div class="meta">October 03, 2018 at 2:21pm</div>
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
-                                  <p><a href="#" class="reply">Reply</a></p>
-                                </div>
-                              </li>
-                            </ul>
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-
-                <li class="comment">
-                  <div class="vcard bio">
-                    <img src="images/person_1.jpg" alt="Image placeholder">
-                  </div>
-                  <div class="comment-body">
-                    <h3>John Doe</h3>
-                    <div class="meta">October 03, 2018 at 2:21pm</div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
-                    <p><a href="#" class="reply">Reply</a></p>
-                  </div>
-                </li>
-              </ul>
-              <!-- END comment-list -->
-              
-              <div class="comment-form-wrap pt-5">
-                <h3 class="mb-5">Leave a comment</h3>
-                <form action="#" class="p-5 bg-light">
-                  <div class="form-group">
-                    <label for="name">Name *</label>
-                    <input type="text" class="form-control" id="name">
-                  </div>
-                  <div class="form-group">
-                    <label for="email">Email *</label>
-                    <input type="email" class="form-control" id="email">
-                  </div>
-                  <div class="form-group">
-                    <label for="website">Website</label>
-                    <input type="url" class="form-control" id="website">
-                  </div>
-
-                  <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea name="" id="message" cols="30" rows="10" class="form-control"></textarea>
-                  </div>
-                  <div class="form-group">
-                    <input type="submit" value="Post Comment" class="btn py-3 px-4 btn-primary">
-                  </div>
-
-                </form>
-              </div>
-            </div>
-
-          </div> <!-- .col-md-8 -->
-          <div class="col-lg-4 sidebar ftco-animate">
-            <div class="sidebar-box">
-              <form action="#" class="search-form">
-                <div class="form-group">
-                  <span class="icon icon-search"></span>
-                  <input type="text" class="form-control" placeholder="Type a keyword and hit enter">
-                </div>
-              </form>
-            </div>
-            <div class="sidebar-box ftco-animate">
-            	<h3 class="heading-sidebar">Categories</h3>
-              <ul class="categories">
-                <li><a href="#">Interior Design <span>(12)</span></a></li>
-                <li><a href="#">Exterior Design <span>(22)</span></a></li>
-                <li><a href="#">Industrial Design <span>(37)</span></a></li>
-                <li><a href="#">Landscape Design <span>(42)</span></a></li>
-              </ul>
-            </div>
-
-            <div class="sidebar-box ftco-animate">
-              <h3 class="heading-sidebar">Recent Blog</h3>
-              <div class="block-21 mb-4 d-flex">
-                <a class="blog-img mr-4" style="background-image: url(images/image_1.jpg);"></a>
-                <div class="text">
-                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-                  <div class="meta">
-                    <div><a href="#"><span class="icon-calendar"></span> March 12, 2019</a></div>
-                    <div><a href="#"><span class="icon-person"></span> Admin</a></div>
-                    <div><a href="#"><span class="icon-chat"></span> 19</a></div>
-                  </div>
-                </div>
-              </div>
-              <div class="block-21 mb-4 d-flex">
-                <a class="blog-img mr-4" style="background-image: url(images/image_2.jpg);"></a>
-                <div class="text">
-                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-                  <div class="meta">
-                    <div><a href="#"><span class="icon-calendar"></span> March 12, 2019</a></div>
-                    <div><a href="#"><span class="icon-person"></span> Admin</a></div>
-                    <div><a href="#"><span class="icon-chat"></span> 19</a></div>
-                  </div>
-                </div>
-              </div>
-              <div class="block-21 mb-4 d-flex">
-                <a class="blog-img mr-4" style="background-image: url(images/image_3.jpg);"></a>
-                <div class="text">
-                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-                  <div class="meta">
-                    <div><a href="#"><span class="icon-calendar"></span> March 12, 2019</a></div>
-                    <div><a href="#"><span class="icon-person"></span> Admin</a></div>
-                    <div><a href="#"><span class="icon-chat"></span> 19</a></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="sidebar-box ftco-animate">
-              <h3 class="heading-sidebar">Tag Cloud</h3>
-              <div class="tagcloud">
-                <a href="#" class="tag-cloud-link">house</a>
-                <a href="#" class="tag-cloud-link">office</a>
-                <a href="#" class="tag-cloud-link">building</a>
-                <a href="#" class="tag-cloud-link">land</a>
-                <a href="#" class="tag-cloud-link">table</a>
-                <a href="#" class="tag-cloud-link">interior</a>
-                <a href="#" class="tag-cloud-link">exterior</a>
-                <a href="#" class="tag-cloud-link">industrial</a>
-              </div>
-            </div>
-
-            <div class="sidebar-box ftco-animate">
-              <h3 class="heading-sidebar">Paragraph</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus itaque, autem necessitatibus voluptate quod mollitia delectus aut, sunt placeat nam vero culpa sapiente consectetur similique, inventore eos fugit cupiditate numquam!</p>
-            </div>
-          </div>
-
-        </div>
+        <p>The retailers who invest in IoT today are building a structural advantage that will compound over time — better data, better decisions, and better customer experiences than competitors still relying on manual processes.</p>
       </div>
-    </section> <!-- .section -->
-		
-
-    <footer class="ftco-footer ftco-section">
-      <div class="container">
-        <div class="row mb-5">
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Square</h2>
-              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
-                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4 ml-md-4">
-              <h2 class="ftco-heading-2">Links</h2>
-              <ul class="list-unstyled">
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Home</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>About</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Services</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Projects</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Contact</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md">
-             <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Services</h2>
-              <ul class="list-unstyled">
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Architectural Design</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Interior Design</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Exterior Design</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Lighting Design</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>AutoCAD Service</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4">
-            	<h2 class="ftco-heading-2">Have a Questions?</h2>
-            	<div class="block-23 mb-3">
-	              <ul>
-	                <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
-	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
-	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
-	              </ul>
-	            </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12 text-center">
-
-            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-          </div>
-        </div>
+      <div class="article-share">
+        <span>Share:</span>
+        <a href="#" class="share-btn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg> LinkedIn</a>
+        <a href="#" class="share-btn"><svg viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg> Twitter</a>
+        <a href="mailto:?subject=Interesting article from The Singular&body=https://theesingular.com/single.html" class="share-btn"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> Email</a>
       </div>
-    </footer>
-    
-  
+    </main>
 
-  <!-- loader -->
-  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+    <!-- SIDEBAR -->
+    <aside class="article-sidebar fu">
+      <div class="sidebar-card">
+        <h3>Related Articles</h3>
+        <a href="single.html" class="related-post"><span class="rp-tag">AI · Mining</span><h4>Can AI enhance mining's collision avoidance technology?</h4><span>Andrew Tunnicliffe</span></a>
+        <a href="single.html" class="related-post"><span class="rp-tag">Mining · Africa</span><h4>Mining 2040: Tech trends shaping the future of African mining</h4><span>Mining Review Africa</span></a>
+        <a href="single.html" class="related-post"><span class="rp-tag">IoT · Smart Cities</span><h4>How private 5G is transforming urban infrastructure</h4><span>The Singular Team</span></a>
+      </div>
+      <div class="sidebar-card">
+        <h3>Explore Industries</h3>
+        <a href="mining.html" class="related-post"><span class="rp-tag">Industry</span><h4>Mining Solutions</h4><span>IoT, safety &amp; automation</span></a>
+        <a href="telecom.html" class="related-post"><span class="rp-tag">Industry</span><h4>Telecommunications</h4><span>Network intelligence</span></a>
+        <a href="smart-cities.html" class="related-post"><span class="rp-tag">Industry</span><h4>Smart Cities</h4><span>Urban IoT &amp; 5G</span></a>
+        <a href="healthcare.html" class="related-post"><span class="rp-tag">Industry</span><h4>Healthcare</h4><span>Connected care</span></a>
+      </div>
+      <div class="cta-sidebar">
+        <h3>Ready to Transform?</h3>
+        <p>Talk to our team about IoT, AI, and private 5G solutions for your industry.</p>
+        <a href="contact.html" class="btn-white" style="font-size:14px;padding:12px 24px">Get In Touch</a>
+      </div>
+    </aside>
+  </div>
+</div>
 
+<!-- MORE ARTICLES -->
+<div class="all-articles">
+  <div class="container">
+    <span class="section-label">More Insights</span>
+    <h2 class="section-heading">Continue Reading</h2>
+    <div class="articles-grid">
+      <a href="single.html" class="art-card fu"><div class="art-card-ph"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div><div class="art-card-body"><span class="art-card-tag">AI · Mining</span><h3>Can AI enhance mining's collision avoidance technology?</h3><p>AI could be the answer to preventing mine vehicle collisions, one of the industry's most persistent safety challenges.</p></div><div class="art-card-foot"><span class="art-card-author">Andrew Tunnicliffe</span><span class="art-card-read">Read More →</span></div></a>
+      <a href="single.html" class="art-card fu"><div class="art-card-ph"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><div class="art-card-body"><span class="art-card-tag">Mining · Africa</span><h3>Mining 2040: Tech trends shaping the future of African mining</h3><p>A deep dive into the technology trends set to redefine Africa's mining landscape over the next two decades.</p></div><div class="art-card-foot"><span class="art-card-author">Mining Review Africa</span><span class="art-card-read">Read More →</span></div></a>
+      <a href="single.html" class="art-card fu"><div class="art-card-ph"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div><div class="art-card-body"><span class="art-card-tag">IoT · Energy</span><h3>The smart grid revolution: How IoT is modernizing energy distribution</h3><p>From smart meters to predictive fault detection — how the modern energy grid is becoming an intelligent network.</p></div><div class="art-card-foot"><span class="art-card-author">The Singular Team</span><span class="art-card-read">Read More →</span></div></a>
+    </div>
+  </div>
+</div>
 
-  <script src="js/jquery.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.easing.1.3.js"></script>
-  <script src="js/jquery.waypoints.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/aos.js"></script>
-  <script src="js/jquery.animateNumber.min.js"></script>
-  <script src="js/bootstrap-datepicker.js"></script>
-  <script src="js/scrollax.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-  <script src="js/google-map.js"></script>
-  <script src="js/main.js"></script>
-    
-  </body>
+<div class="cta-band">
+  <div class="cta-inner fu">
+    <h2>Transform Your Operations with Singular</h2>
+    <p>Connect with our team to explore how IoT, AI, and private 5G can work for your industry.</p>
+    <div class="cta-actions"><a href="contact.html" class="btn-white">Get In Touch</a><a href="index.html#industries" class="btn-ghost-white">Explore Industries</a></div>
+  </div>
+</div>
+
+<footer>
+  <div class="ft-top">
+    <div class="ft-brand"><img src="images/image008.png" alt="The Singular"/><p>Unleash the Future for Seamless Connectivity and Smart Possibilities. Purpose-driven networks for the fourth industrial revolution.</p><div class="ft-socials"><a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a><a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg></a><a href="mailto:info@theesingular.com" aria-label="Email"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a></div></div>
+    <div class="ft-col"><h5>Industries</h5><ul><li><a href="mining.html">Mining</a></li><li><a href="telecom.html">Telecommunications</a></li><li><a href="manufacturing.html">Manufacturing</a></li><li><a href="smart-cities.html">Smart Cities</a></li><li><a href="utilities.html">Utilities &amp; Energy</a></li><li><a href="healthcare.html">Healthcare</a></li></ul></div>
+    <div class="ft-col"><h5>Company</h5><ul><li><a href="about.html">About Us</a></li><li><a href="about.html#mission">Our Mission</a></li><li><a href="about.html#team">Our Team</a></li><li><a href="single.html">Insights</a></li></ul></div>
+    <div class="ft-col"><h5>Contact</h5><ul><li><a href="tel:+27832838471">+27 83 283 8471</a></li><li><a href="mailto:info@theesingular.com">info@theesingular.com</a></li><li><a href="#">Sandton, Johannesburg</a></li><li><a href="contact.html">Get In Touch</a></li></ul></div>
+  </div>
+  <div class="ft-bottom"><p>© 2026 TheeSingular. All rights reserved.</p><div class="ft-links"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a></div></div>
+</footer>
+<script src="js/site.js"></script>
+</body>
 </html>

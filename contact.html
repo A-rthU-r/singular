@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Contact Us — The Singular</title>
+<meta name="description" content="Get in touch with The Singular team to discuss your IoT, AI, and private 5G network requirements."/>
+<link rel="stylesheet" href="css/main.css"/>
+<style>
+.ct-wrapper{display:grid;grid-template-columns:1fr 1.4fr;gap:80px;align-items:start}
+.ct-info h2{font-family:'Syne',sans-serif;font-size:clamp(28px,3.5vw,42px);font-weight:800;color:#0D1117;line-height:1.12;margin-bottom:18px;letter-spacing:-.02em}
+.ct-info>p{font-size:16px;color:#4B5563;line-height:1.75;margin-bottom:44px}
+.ct-details{display:flex;flex-direction:column;gap:20px;margin-bottom:48px}
+.ct-detail{display:flex;gap:16px;align-items:flex-start}
+.ct-di{width:48px;height:48px;min-width:48px;background:#EFF6FF;border-radius:12px;display:flex;align-items:center;justify-content:center}
+.ct-di svg{width:20px;height:20px;stroke:#3B82F6;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.ct-detail-text strong{font-family:'Syne',sans-serif;font-size:11px;font-weight:700;color:#0D1117;display:block;margin-bottom:4px;letter-spacing:.08em;text-transform:uppercase}
+.ct-detail-text a,.ct-detail-text span{font-size:15px;color:#4B5563;text-decoration:none;line-height:1.5;display:block}
+.ct-detail-text a:hover{color:#3B82F6}
+.social-label{font-family:'Syne',sans-serif;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#0D1117;margin-bottom:12px}
+.ct-socials{display:flex;gap:10px}
+.ct-socials a{width:40px;height:40px;border-radius:10px;border:1px solid #E4E7EC;background:#fff;display:flex;align-items:center;justify-content:center;transition:all .25s}
+.ct-socials a:hover{background:#3B82F6;border-color:#3B82F6}
+.ct-socials svg{width:16px;height:16px;stroke:#4B5563;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:stroke .25s}
+.ct-socials a:hover svg{stroke:#fff}
+/* Form card */
+.form-card{background:#F7F8FA;border:1px solid #E4E7EC;border-radius:20px;padding:48px}
+.form-card-head{margin-bottom:32px}
+.form-card-head h3{font-family:'Syne',sans-serif;font-size:22px;font-weight:800;color:#0D1117;margin-bottom:8px}
+.form-card-head p{font-size:14px;color:#4B5563;line-height:1.6}
+#hs-form-target{min-height:80px}
+/* Styled fallback form */
+.native-form{display:none}
+.native-form.show{display:block}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.fg{display:flex;flex-direction:column;gap:6px;margin-bottom:16px}
+.fg label{font-family:'Syne',sans-serif;font-size:11px;font-weight:700;color:#0D1117;letter-spacing:.06em;text-transform:uppercase}
+.fg input,.fg select,.fg textarea{padding:13px 16px;border:1px solid #E4E7EC;border-radius:8px;font-family:'Epilogue',sans-serif;font-size:14px;color:#0D1117;background:#fff;transition:border-color .25s,box-shadow .25s;outline:none;-webkit-appearance:none;width:100%}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:#3B82F6;box-shadow:0 0 0 3px #EFF6FF}
+.fg textarea{resize:vertical;min-height:120px}
+.form-submit{width:100%;padding:15px;border:none;border-radius:8px;background:#3B82F6;color:#fff;font-family:'Syne',sans-serif;font-size:15px;font-weight:700;cursor:pointer;transition:background .25s,transform .25s;margin-top:8px}
+.form-submit:hover{background:#2563EB;transform:translateY(-1px)}
+.form-note{font-size:12px;color:#9CA3AF;text-align:center;margin-top:12px}
+/* Map section */
+.map-section{background:#F7F8FA;padding:80px 24px}
+.map-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1.6fr;gap:64px;align-items:center}
+.map-content h2{font-family:'Syne',sans-serif;font-size:clamp(24px,3vw,36px);font-weight:800;color:#0D1117;margin-bottom:16px;letter-spacing:-.02em}
+.map-content p{font-size:15px;color:#4B5563;line-height:1.7;margin-bottom:28px}
+.map-card{background:#fff;border-radius:10px;padding:20px;border:1px solid #E4E7EC;display:flex;gap:14px;align-items:flex-start}
+.mc-icon{width:40px;height:40px;min-width:40px;background:#EFF6FF;border-radius:8px;display:flex;align-items:center;justify-content:center}
+.mc-icon svg{width:18px;height:18px;stroke:#3B82F6;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.map-card strong{font-family:'Syne',sans-serif;font-size:13px;font-weight:700;color:#0D1117;display:block;margin-bottom:2px}
+.map-card span{font-size:13px;color:#4B5563}
+.map-frame{border-radius:16px;overflow:hidden;height:380px;border:1px solid #E4E7EC}
+.map-frame iframe{width:100%;height:100%;border:none;display:block}
+/* FAQ */
+.faq-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:80px;align-items:start}
+@media(max-width:1024px){.ct-wrapper,.map-grid,.faq-grid{grid-template-columns:1fr;gap:48px}.form-card{padding:32px 24px}}
+@media(max-width:768px){.form-row{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<nav id="ts-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="images/image008.png" alt="The Singular"/></a>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="index.html#industries">Industries</a></li>
+      <li><a href="index.html#why">Why Singular</a></li>
+      <li><a href="index.html#blog">Insights</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+      <li><a href="contact.html" class="nav-cta">Get In Touch</a></li>
+    </ul>
+    <button class="nav-burger" id="ts-burger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-nav" id="ts-mobile-nav">
+  <a href="about.html">About</a><a href="index.html#industries">Industries</a><a href="index.html#why">Why Singular</a><a href="index.html#blog">Insights</a><a href="contact.html">Contact</a><a href="contact.html">Get In Touch →</a>
+</div>
+
+<div class="page-hero">
+  <div class="ph-bg"></div><div class="ph-glow"></div>
+  <div class="ph-inner">
+    <div class="breadcrumb"><a href="index.html">Home</a><span class="sep"> › </span><span class="cur">Contact</span></div>
+    <div class="ph-tag">Get In Touch</div>
+    <h1>Let's Build the <span>Future Together</span></h1>
+    <p class="ph-sub">Whether you're exploring IoT solutions, private 5G networks, or digital transformation strategy — our team is ready to help you get started.</p>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <div class="ct-wrapper">
+      <!-- LEFT -->
+      <div class="fu">
+        <span class="section-label">Contact Information</span>
+        <h2>We'd Love to Hear from You</h2>
+        <p>Have a question about our solutions or ready to start your digital transformation journey? Reach out — we'll get back to you within 24 hours.</p>
+        <div class="ct-details">
+          <div class="ct-detail">
+            <div class="ct-di"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div class="ct-detail-text"><strong>Our Office</strong><span>105 Metropolis On Park</span><span>118 Pretoria Avenue, Sandton</span><span>Johannesburg, South Africa</span></div>
+          </div>
+          <div class="ct-detail">
+            <div class="ct-di"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.79 19.79 19.79 0 01.01 1.18a2 2 0 012-2.18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.91 7.18a16 16 0 006.91 6.91l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7a2 2 0 011.72 2.03z"/></svg></div>
+            <div class="ct-detail-text"><strong>Phone</strong><a href="tel:+27832838471">+27 83 283 8471</a></div>
+          </div>
+          <div class="ct-detail">
+            <div class="ct-di"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+            <div class="ct-detail-text"><strong>Email</strong><a href="mailto:info@theesingular.com">info@theesingular.com</a></div>
+          </div>
+          <div class="ct-detail">
+            <div class="ct-di"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <div class="ct-detail-text"><strong>Response Time</strong><span>We respond within 24 business hours</span></div>
+          </div>
+        </div>
+        <div class="social-label">Follow Us</div>
+        <div class="ct-socials">
+          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+          <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg></a>
+          <a href="mailto:info@theesingular.com" aria-label="Email"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
+        </div>
+      </div>
+
+      <!-- RIGHT: Form -->
+      <div class="form-card fu">
+        <div class="form-card-head">
+          <h3>Send Us a Message</h3>
+          <p>Tell us about your project and we'll connect you with the right team member.</p>
+        </div>
+        <!--
+        ══════════════════════════════════════════════
+        HUBSPOT SETUP INSTRUCTIONS
+        ══════════════════════════════════════════════
+        1. Log in to HubSpot
+        2. Go to Marketing > Forms > [Your Form]
+        3. Click "Share" > "Embed Code"
+        4. Copy your portalId and formId
+        5. Paste them into the <script> block below
+        ══════════════════════════════════════════════
+        -->
+        <div id="hs-form-target"></div>
+        <!-- Native fallback — displays automatically if HubSpot not configured -->
+        <div class="native-form" id="hs-fallback">
+          <div class="form-row">
+            <div class="fg"><label>First Name</label><input type="text" placeholder="John"/></div>
+            <div class="fg"><label>Last Name</label><input type="text" placeholder="Smith"/></div>
+          </div>
+          <div class="fg"><label>Company</label><input type="text" placeholder="Your company name"/></div>
+          <div class="fg"><label>Email Address</label><input type="email" placeholder="john@company.com"/></div>
+          <div class="fg"><label>Phone Number</label><input type="tel" placeholder="+27 XX XXX XXXX"/></div>
+          <div class="fg"><label>Industry</label>
+            <select>
+              <option value="">Select your industry...</option>
+              <option>Mining</option><option>Telecommunications</option><option>Manufacturing</option>
+              <option>Smart Cities</option><option>Utilities &amp; Energy</option><option>Healthcare</option><option>Other</option>
+            </select>
+          </div>
+          <div class="fg"><label>Message</label><textarea placeholder="Tell us about your project or how we can help..."></textarea></div>
+          <button class="form-submit" onclick="window.open('https://share-eu1.hsforms.com/1fZx1K1zdS-iMJJclshb99w2ewkpq','_blank')">Send Message →</button>
+          <p class="form-note">By submitting you agree to our Privacy Policy. We never share your details.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAP -->
+<div class="map-section">
+  <div class="map-grid">
+    <div class="fu">
+      <span class="section-label">Our Location</span>
+      <h2>Find Us in the Heart of Sandton</h2>
+      <p>We're based at Metropolis On Park in Sandton, Johannesburg — one of Africa's premier business addresses. Easily accessible from all major routes, and we welcome visitors by appointment.</p>
+      <div class="map-card">
+        <div class="mc-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <div><strong>Metropolis On Park</strong><span>105 Metropolis On Park, 118 Pretoria Avenue<br>Sandton, 2196, Johannesburg, South Africa</span></div>
+      </div>
+    </div>
+    <div class="map-frame fu">
+      <iframe src="https://maps.google.com/maps?q=Metropolis+on+Park+118+Pretoria+Ave+Sandton&output=embed" title="TheeSingular Office Location" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</div>
+
+<!-- FAQ -->
+<section>
+  <div class="container">
+    <div class="faq-grid">
+      <div><span class="section-label">FAQs</span><h2 class="section-heading">Common Questions</h2><p class="section-sub">Can't find what you're looking for? <a href="mailto:info@theesingular.com" style="color:#3B82F6;font-weight:600">Email us directly</a> and we'll respond within 24 hours.</p></div>
+      <div class="acc-list acc-group fu">
+        <div class="acc-item open"><div class="acc-head"><h4>What industries do you serve?</h4><span class="acc-toggle">+</span></div><div class="acc-body">We serve mining, telecommunications, manufacturing, smart cities, utilities &amp; energy, and healthcare. Our IoT and private 5G solutions are customised for the specific operational challenges and regulatory environments of each sector.</div></div>
+        <div class="acc-item"><div class="acc-head"><h4>What is a private 5G network?</h4><span class="acc-toggle">+</span></div><div class="acc-body">A private 5G network is a dedicated wireless network built exclusively for your organisation — not shared with the public. It provides ultra-low latency, high bandwidth, and enterprise-grade security, ideal for mission-critical industrial applications.</div></div>
+        <div class="acc-item"><div class="acc-head"><h4>How do you integrate with existing infrastructure?</h4><span class="acc-toggle">+</span></div><div class="acc-body">We design our solutions to integrate seamlessly with your existing systems — from legacy SCADA and OT networks to modern cloud platforms. Our team conducts a thorough discovery phase before any deployment begins.</div></div>
+        <div class="acc-item"><div class="acc-head"><h4>Do you operate outside South Africa?</h4><span class="acc-toggle">+</span></div><div class="acc-body">Yes. While headquartered in Johannesburg, we operate across Africa and internationally through our network of 200+ trusted channel partners worldwide.</div></div>
+        <div class="acc-item"><div class="acc-head"><h4>How long does a typical deployment take?</h4><span class="acc-toggle">+</span></div><div class="acc-body">Timelines vary by project scope. A typical pilot deployment runs 6–12 weeks from design to go-live. Full enterprise rollouts are planned in phases to minimise disruption to your operations.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-band">
+  <div class="cta-inner fu">
+    <h2>Ready to Start Your Transformation?</h2>
+    <p>Join hundreds of organisations worldwide that trust Singular to power their digital transformation journey.</p>
+    <div class="cta-actions"><a href="tel:+27832838471" class="btn-white">Call Us Now</a><a href="index.html#industries" class="btn-ghost-white">Explore Industries</a></div>
+  </div>
+</div>
+
+<footer>
+  <div class="ft-top">
+    <div class="ft-brand"><img src="images/image008.png" alt="The Singular"/><p>Unleash the Future for Seamless Connectivity and Smart Possibilities. Purpose-driven networks for the fourth industrial revolution.</p><div class="ft-socials"><a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a><a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg></a><a href="mailto:info@theesingular.com" aria-label="Email"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a></div></div>
+    <div class="ft-col"><h5>Industries</h5><ul><li><a href="mining.html">Mining</a></li><li><a href="telecom.html">Telecommunications</a></li><li><a href="manufacturing.html">Manufacturing</a></li><li><a href="smart-cities.html">Smart Cities</a></li><li><a href="utilities.html">Utilities &amp; Energy</a></li><li><a href="healthcare.html">Healthcare</a></li></ul></div>
+    <div class="ft-col"><h5>Company</h5><ul><li><a href="about.html">About Us</a></li><li><a href="about.html#mission">Our Mission</a></li><li><a href="about.html#team">Our Team</a></li><li><a href="index.html#blog">Insights</a></li></ul></div>
+    <div class="ft-col"><h5>Contact</h5><ul><li><a href="tel:+27832838471">+27 83 283 8471</a></li><li><a href="mailto:info@theesingular.com">info@theesingular.com</a></li><li><a href="#">Sandton, Johannesburg</a></li></ul></div>
+  </div>
+  <div class="ft-bottom"><p>© 2026 TheeSingular. All rights reserved.</p><div class="ft-links"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a></div></div>
+</footer>
+
+<script src="js/site.js"></script>
+<script>
+  /*
+   * HUBSPOT CONFIGURATION
+   * Replace the values below with your actual HubSpot credentials.
+   * Find them in: HubSpot → Marketing → Forms → [Your Form] → Share → Embed Code
+   */
+  loadHubSpotForm(
+    'YOUR_PORTAL_ID',   // e.g. '12345678'
+    'YOUR_FORM_ID',     // e.g. 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'
+    'eu1',              // 'eu1' for EU accounts, 'na1' for US accounts
+    'hs-form-target'
+  );
+</script>
+</body>
+</html>

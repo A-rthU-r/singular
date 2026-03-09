@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>About Us — The Singular</title>
+<meta name="description" content="The Singular is a technology company committed to redefining digital connectivity through innovative IoT, AI and private 5G solutions."/>
+<link rel="stylesheet" href="css/main.css"/>
+<style>
+/* ── MISSION ── */
+.mission-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.mv{position:relative;border-radius:16px;overflow:hidden}
+.mv img{width:100%;height:540px;object-fit:cover;border-radius:16px;display:block}
+.mv-accent{position:absolute;top:-20px;right:-20px;width:180px;height:180px;border-radius:16px;background:linear-gradient(135deg,#3B82F6,#2563EB);z-index:-1;opacity:.15}
+.mission-grid p{font-size:16px;color:#4B5563;line-height:1.8;margin-top:16px}
+.mission-grid p+p{margin-top:12px}
+/* ── SPLIT ── */
+.split{display:grid;grid-template-columns:1fr 1fr;min-height:520px}
+.split.rev .split-img{order:2}.split.rev .split-cnt{order:1}
+.split-img{position:relative;overflow:hidden;min-height:400px}
+.split-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s ease}
+.split:hover .split-img img{transform:scale(1.03)}
+.split-img-ov{position:absolute;inset:0;background:linear-gradient(135deg,rgba(10,22,40,.35),transparent 60%)}
+.split-cnt{background:#F7F8FA;padding:72px 64px;display:flex;flex-direction:column;justify-content:center}
+.split-cnt p{font-size:16px;color:#4B5563;line-height:1.75;margin-top:16px}
+.big-quote{font-family:'Syne',sans-serif;font-size:clamp(18px,2.5vw,26px);font-weight:700;color:#0D1117;line-height:1.4;margin:20px 0;border-left:4px solid #3B82F6;padding-left:24px}
+/* ── VALUES ── */
+.values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:52px}
+.val-card{padding:36px 32px;border-radius:12px;border:1px solid #E4E7EC;transition:all .25s}
+.val-card:hover{border-color:rgba(59,130,246,.3);box-shadow:0 4px 16px rgba(0,0,0,.08);transform:translateY(-3px)}
+.val-num{font-family:'Syne',sans-serif;font-size:48px;font-weight:800;line-height:1;margin-bottom:16px;background:linear-gradient(135deg,#3B82F6,#2563EB);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.val-card h3{font-family:'Syne',sans-serif;font-size:18px;font-weight:700;color:#0D1117;margin-bottom:12px}
+.val-card p{font-size:14px;color:#4B5563;line-height:1.65}
+/* ── IMG BANNER ── */
+.img-banner{position:relative;min-height:460px;display:flex;align-items:center;overflow:hidden}
+.ib-bg{position:absolute;inset:0}.ib-bg img{width:100%;height:100%;object-fit:cover}
+.ib-ov{position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,22,40,.88) 0%,rgba(10,22,40,.5) 60%,transparent 100%)}
+.ib-content{position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:80px 24px;width:100%}
+.ib-inner{max-width:580px}
+.ib-inner h2{font-family:'Syne',sans-serif;font-size:clamp(28px,4vw,48px);font-weight:800;color:#fff;line-height:1.1;margin-bottom:18px;letter-spacing:-.02em}
+.ib-inner p{font-size:16px;color:rgba(255,255,255,.65);line-height:1.7;margin-bottom:32px;font-weight:300}
+/* ── TEAM ── */
+.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:48px}
+.team-card{background:#fff;border-radius:12px;overflow:hidden;border:1px solid #E4E7EC;transition:all .25s}
+.team-card:hover{box-shadow:0 4px 16px rgba(0,0,0,.08);transform:translateY(-3px)}
+.tc-ph{width:100%;height:260px;background:linear-gradient(135deg,#0A1628,#0D2250);display:flex;align-items:center;justify-content:center}
+.tc-ph svg{width:56px;height:56px;stroke:rgba(255,255,255,.2);fill:none;stroke-width:1.5}
+.tc-body{padding:24px}
+.tc-role{font-family:'Syne',sans-serif;font-size:11px;font-weight:700;color:#3B82F6;letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px}
+.team-card h3{font-family:'Syne',sans-serif;font-size:18px;font-weight:700;color:#0D1117;margin-bottom:8px}
+.team-card p{font-size:13px;color:#4B5563;line-height:1.6}
+/* ── TIMELINE ── */
+.tl-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.tl{position:relative;margin-top:12px;padding-left:40px}
+.tl::before{content:'';position:absolute;left:12px;top:8px;bottom:8px;width:2px;background:#E4E7EC}
+.tl-item{position:relative;margin-bottom:44px}
+.tl-item:last-child{margin-bottom:0}
+.tl-dot{position:absolute;left:-34px;top:6px;width:16px;height:16px;border-radius:50%;background:#fff;border:3px solid #3B82F6;box-shadow:0 0 0 4px #EFF6FF}
+.tl-year{font-family:'Syne',sans-serif;font-size:11px;font-weight:700;color:#3B82F6;letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px}
+.tl-item h3{font-family:'Syne',sans-serif;font-size:17px;font-weight:700;color:#0D1117;margin-bottom:8px}
+.tl-item p{font-size:14px;color:#4B5563;line-height:1.65;max-width:480px}
+/* ── RESPONSIVE ── */
+@media(max-width:1024px){.mission-grid,.split,.tl-grid{grid-template-columns:1fr;gap:48px}.split.rev .split-img,.split.rev .split-cnt{order:0}.split-cnt{padding:56px 40px}.values-grid{grid-template-columns:1fr 1fr}.team-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:768px){.values-grid,.team-grid{grid-template-columns:1fr}.split-cnt{padding:48px 24px}}
+</style>
+</head>
+<body>
+
+<nav id="ts-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="images/image008.png" alt="The Singular"/></a>
+    <ul class="nav-links">
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="index.html#industries">Industries</a></li>
+      <li><a href="index.html#why">Why Singular</a></li>
+      <li><a href="index.html#blog">Insights</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="contact.html" class="nav-cta">Get In Touch</a></li>
+    </ul>
+    <button class="nav-burger" id="ts-burger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-nav" id="ts-mobile-nav">
+  <a href="about.html">About</a><a href="index.html#industries">Industries</a><a href="index.html#why">Why Singular</a><a href="index.html#blog">Insights</a><a href="contact.html">Contact</a><a href="contact.html">Get In Touch →</a>
+</div>
+
+<div class="page-hero">
+  <div class="ph-bg"></div><div class="ph-glow"></div>
+  <div class="ph-inner">
+    <div class="breadcrumb"><a href="index.html">Home</a><span class="sep"> › </span><span class="cur">About Us</span></div>
+    <div class="ph-tag">Our Story</div>
+    <h1>Purpose-Driven Networks for a <span>Connected World</span></h1>
+    <p class="ph-sub">We are a technology company committed to redefining digital connectivity through innovative solutions that empower businesses and transform communities worldwide.</p>
+  </div>
+</div>
+
+<!-- MISSION -->
+<section id="mission">
+  <div class="container">
+    <div class="mission-grid">
+      <div class="mv fu">
+        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=900&q=80" alt="Singular Team"/>
+        <div class="mv-accent"></div>
+      </div>
+      <div class="fu">
+        <span class="section-label">Our Mission</span>
+        <h2 class="section-heading">Empowering Global Progress through Advanced Digital Transformation</h2>
+        <p>At Singular, we believe connectivity is the foundation of progress. We leverage the power of IoT, AI, and private 5G networks to drive efficiency, security, and intelligence — empowering businesses to thrive in an increasingly connected world.</p>
+        <p>With IoT at our core, we build operations that are proactive, anticipating issues before they arise, refining processes on the fly, and delivering insights in real time. This transformation redefines success across industries, from mining and manufacturing to healthcare and smart cities.</p>
+        <p>Our cutting-edge private 5G networks provide dedicated high-speed connectivity with ultra-low latency and robust security. Together, IoT and private 5G form a powerful alliance that propels your business into a future of limitless opportunities.</p>
+        <div style="margin-top:32px"><a href="contact.html" class="btn-primary">Start Your Transformation <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VISION SPLIT -->
+<div class="split">
+  <div class="split-img"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80" alt="Technology Innovation"/><div class="split-img-ov"></div></div>
+  <div class="split-cnt fu">
+    <span class="section-label">Our Vision</span>
+    <h2 class="section-heading">Be Part of the Fourth Industrial Revolution</h2>
+    <blockquote class="big-quote">"Imagine a world where every device speaks, every system learns, and every process is optimized automatically."</blockquote>
+    <p>This is not a distant future — it's what we build every day. From remote mining operations to urban smart city grids, Singular brings intelligence to infrastructure at every scale.</p>
+    <div style="margin-top:24px"><a href="index.html#industries" class="btn-secondary">See Our Industries</a></div>
+  </div>
+</div>
+
+<!-- VALUES -->
+<section id="values" style="background:#F7F8FA">
+  <div class="container">
+    <div style="max-width:600px"><span class="section-label">Our Values</span><h2 class="section-heading">The Principles That Drive Us</h2><p class="section-sub">Everything we build is guided by a set of core principles that ensure we deliver lasting value to our clients and communities.</p></div>
+    <div class="values-grid">
+      <div class="val-card fu"><div class="val-num">01</div><h3>Innovation First</h3><p>We continuously explore and adopt emerging technologies — IoT, AI, 5G, edge computing — to ensure our clients always have access to the most advanced solutions available.</p></div>
+      <div class="val-card fu"><div class="val-num">02</div><h3>Purpose-Driven</h3><p>Every network we build, every solution we deploy has a clear purpose — improving lives, reducing waste, enhancing safety, and enabling communities to thrive.</p></div>
+      <div class="val-card fu"><div class="val-num">03</div><h3>Trusted Partnership</h3><p>We operate as an extension of your team. Our success is measured by your success — from the first consultation to ongoing managed services and beyond.</p></div>
+      <div class="val-card fu"><div class="val-num">04</div><h3>Security by Design</h3><p>Security is not an afterthought at Singular. It's embedded at every layer of every solution — from hardware to application, edge to cloud.</p></div>
+      <div class="val-card fu"><div class="val-num">05</div><h3>Scalable Impact</h3><p>We design for the future. Our architectures grow with your business — from pilot deployments to global rollouts — without compromise on performance or reliability.</p></div>
+      <div class="val-card fu"><div class="val-num">06</div><h3>African Roots, Global Reach</h3><p>Founded in Johannesburg and operating globally, we bring deep local knowledge and world-class expertise to every engagement on every continent.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- IMPACT BANNER -->
+<div class="img-banner">
+  <div class="ib-bg"><img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1600&q=80" alt="Global Technology"/></div>
+  <div class="ib-ov"></div>
+  <div class="ib-content"><div class="ib-inner fu"><span class="section-label" style="color:#93C5FD">Our Impact</span><h2>Measured in Outcomes, Not Just Output</h2><p>Our work is reflected in the industries we've transformed, the costs we've reduced, and the safety records we've improved for clients across Africa and beyond.</p><a href="contact.html" class="btn-white">Partner With Us</a></div></div>
+</div>
+
+<!-- STATS -->
+<div class="stats-band">
+  <div class="stats-grid">
+    <div class="stat-item fu"><span class="stat-num">500M+</span><div class="stat-label">Telemetry Messages<br>Processed Annually</div></div>
+    <div class="stat-item fu"><span class="stat-num">200+</span><div class="stat-label">Trusted Channel<br>Partners Worldwide</div></div>
+    <div class="stat-item fu"><span class="stat-num">40%</span><div class="stat-label">Operational Cost<br>Reduction</div></div>
+    <div class="stat-item fu"><span class="stat-num">10M+</span><div class="stat-label">Global Endpoints<br>Managed</div></div>
+  </div>
+</div>
+
+<!-- TEAM -->
+<section id="team">
+  <div class="container">
+    <div style="max-width:600px"><span class="section-label">Our Team</span><h2 class="section-heading">The People Powering the Future</h2><p class="section-sub">Our team brings together world-class engineers, industry specialists, and technology visionaries united by a common mission.</p></div>
+    <div class="team-grid">
+      <div class="team-card fu"><div class="tc-ph"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div><div class="tc-body"><div class="tc-role">Chief Executive Officer</div><h3>Leadership</h3><p>Driving Singular's vision of connected intelligence across industries, with decades of experience in enterprise technology and digital transformation.</p></div></div>
+      <div class="team-card fu"><div class="tc-ph"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div><div class="tc-body"><div class="tc-role">Chief Technology Officer</div><h3>Technology</h3><p>Architect of Singular's IoT and private 5G platform, bringing expertise in network design, edge computing, and AI-driven automation systems.</p></div></div>
+      <div class="team-card fu"><div class="tc-ph"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div><div class="tc-body"><div class="tc-role">Chief Operations Officer</div><h3>Operations</h3><p>Ensuring every deployment is executed to the highest standard, overseeing global operations and our network of 200+ channel partners worldwide.</p></div></div>
+    </div>
+    <p style="text-align:center;margin-top:36px;font-size:14px;color:#9CA3AF">Team bios and photos coming soon — <a href="contact.html" style="color:#3B82F6;font-weight:600">contact us</a> to connect directly.</p>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section style="background:#F7F8FA">
+  <div class="container">
+    <div class="tl-grid">
+      <div><span class="section-label">Our Journey</span><h2 class="section-heading">Building the Future, One Network at a Time</h2><p class="section-sub">From our founding in Johannesburg to managing millions of endpoints globally — here's how we got here.</p></div>
+      <div class="tl fu">
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">Founded</div><h3>The Singular is Born</h3><p>Founded in Sandton, Johannesburg with a clear mission: to bring purpose-driven networks and advanced IoT solutions to industries across Africa and beyond.</p></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">Early Growth</div><h3>First Industry Deployments</h3><p>Completed our first private 5G and IoT deployments in mining and telecommunications, proving the model and establishing our channel partner network.</p></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">Expansion</div><h3>Scaling Across Industries</h3><p>Expanded into manufacturing, smart cities, utilities, and healthcare — growing our platform to manage millions of connected endpoints globally.</p></div>
+        <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">Today</div><h3>500M+ Messages. 10M+ Endpoints.</h3><p>Today, Singular processes over 500 million telemetry messages annually across 10 million+ global endpoints, with 200+ trusted channel partners worldwide.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-band">
+  <div class="cta-inner fu">
+    <h2>Ready to Transform Your Operations?</h2>
+    <p>Partner with Singular to bring IoT intelligence and private 5G connectivity to your business.</p>
+    <div class="cta-actions"><a href="contact.html" class="btn-white">Get In Touch</a><a href="index.html#industries" class="btn-ghost-white">Explore Industries</a></div>
+  </div>
+</div>
+
+<footer>
+  <div class="ft-top">
+    <div class="ft-brand"><img src="images/image008.png" alt="The Singular"/><p>Unleash the Future for Seamless Connectivity and Smart Possibilities. Purpose-driven networks for the fourth industrial revolution.</p><div class="ft-socials"><a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a><a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg></a><a href="mailto:info@theesingular.com" aria-label="Email"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a></div></div>
+    <div class="ft-col"><h5>Industries</h5><ul><li><a href="mining.html">Mining</a></li><li><a href="telecom.html">Telecommunications</a></li><li><a href="manufacturing.html">Manufacturing</a></li><li><a href="smart-cities.html">Smart Cities</a></li><li><a href="utilities.html">Utilities &amp; Energy</a></li><li><a href="healthcare.html">Healthcare</a></li></ul></div>
+    <div class="ft-col"><h5>Company</h5><ul><li><a href="about.html">About Us</a></li><li><a href="about.html#mission">Our Mission</a></li><li><a href="about.html#team">Our Team</a></li><li><a href="index.html#blog">Insights</a></li></ul></div>
+    <div class="ft-col"><h5>Contact</h5><ul><li><a href="tel:+27832838471">+27 83 283 8471</a></li><li><a href="mailto:info@theesingular.com">info@theesingular.com</a></li><li><a href="contact.html">Sandton, Johannesburg</a></li><li><a href="contact.html">Get In Touch</a></li></ul></div>
+  </div>
+  <div class="ft-bottom"><p>© 2026 TheeSingular. All rights reserved.</p><div class="ft-links"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a></div></div>
+</footer>
+<script src="js/site.js"></script>
+</body>
+</html>

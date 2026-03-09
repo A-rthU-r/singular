@@ -1,166 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>The Singular | Utilities & Energy</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900" rel="stylesheet">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Utilities & Energy Solutions — The Singular</title>
+<meta name="description" content="Modernize energy distribution with advanced IoT and private 5G networks. Monitor power grids, reduce energy waste, and detect faults in real time."/>
+<link rel="stylesheet" href="css/main.css"/>
+<style>
+.split{display:grid;grid-template-columns:1fr 1fr;min-height:520px}
+.split.rev .split-img{order:2}.split.rev .split-cnt{order:1}
+.split-img{position:relative;overflow:hidden;min-height:420px}
+.split-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s ease}
+.split:hover .split-img img{transform:scale(1.03)}
+.split-img-ov{position:absolute;inset:0;background:linear-gradient(135deg,rgba(10,22,40,.3),transparent 60%)}
+.split-cnt{background:#F7F8FA;padding:72px 64px;display:flex;flex-direction:column;justify-content:center}
+.split-cnt.dark{background:linear-gradient(135deg,#0A1628,#0D2250)}
+.split-cnt.dark .section-label{color:#93C5FD}
+.split-cnt.dark h2,.split-cnt.dark .section-heading{color:#fff}
+.split-cnt.dark p{color:rgba(255,255,255,.6)}
+.split-cnt p{font-size:16px;color:#4B5563;line-height:1.75;margin-top:16px}
+.feat-list{list-style:none;margin:24px 0;display:flex;flex-direction:column;gap:11px}
+.feat-list li{display:flex;align-items:center;gap:10px;font-size:14px;color:#4B5563}
+.split-cnt.dark .feat-list li{color:rgba(255,255,255,.65)}
+.feat-list li::before{content:'';width:6px;height:6px;border-radius:50%;background:#3B82F6;flex-shrink:0}
+.img-banner{position:relative;min-height:480px;display:flex;align-items:center;overflow:hidden}
+.ib-bg{position:absolute;inset:0}.ib-bg img{width:100%;height:100%;object-fit:cover}
+.ib-ov{position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,22,40,.88) 0%,rgba(10,22,40,.5) 60%,transparent 100%)}
+.ib-content{position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:80px 24px;width:100%}
+.ib-inner{max-width:580px}
+.ib-inner h2{font-family:'Syne',sans-serif;font-size:clamp(28px,4vw,48px);font-weight:800;color:#fff;line-height:1.1;margin-bottom:18px;letter-spacing:-.02em}
+.ib-inner p{font-size:16px;color:rgba(255,255,255,.65);line-height:1.7;margin-bottom:32px;font-weight:300}
+@media(max-width:1024px){.split{grid-template-columns:1fr}.split.rev .split-img,.split.rev .split-cnt{order:0}.split-cnt{padding:56px 40px}}
+@media(max-width:768px){.split-cnt{padding:48px 24px}}
+</style>
+</head>
+<body>
+<nav id="ts-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="images/image008.png" alt="The Singular"/></a>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="index.html#industries" class="active">Industries</a></li>
+      <li><a href="index.html#why">Why Singular</a></li>
+      <li><a href="index.html#blog">Insights</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="contact.html" class="nav-cta">Get In Touch</a></li>
+    </ul>
+    <button class="nav-burger" id="ts-burger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="mobile-nav" id="ts-mobile-nav">
+  <a href="about.html">About</a>
+  <a href="index.html#industries">Industries</a>
+  <a href="index.html#why">Why Singular</a>
+  <a href="index.html#blog">Insights</a>
+  <a href="contact.html">Contact</a>
+  <a href="contact.html">Get In Touch →</a>
+</div>
 
-    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="css/animate.css">
-    
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
+<div class="page-hero">
+  <div class="ph-bg"></div><div class="ph-glow"></div>
+  <div class="ph-inner">
+    <div class="breadcrumb"><a href="index.html">Home</a><span class="sep"> › </span><a href="index.html#industries">Industries</a><span class="sep"> › </span><span class="cur">Utilities</span></div>
+    <div class="ph-tag">Industry Solutions</div>
+    <h1>IoT &amp; 5G Solutions for <span>Utilities &amp; Energy</span></h1>
+    <p class="ph-sub">Modernize energy distribution with advanced IoT and private 5G networks. Monitor power grids, reduce energy waste, and detect faults in real time.</p>
+  </div>
+</div>
 
-    <link rel="stylesheet" href="css/aos.css">
+<div class="split">
+  <div class="split-img"><img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=1000&q=80" alt="Energy Infrastructure"/><div class="split-img-ov"></div></div>
+  <div class="split-cnt fu">
+    <span class="section-label">The Challenge</span>
+    <h2 class="section-heading">Energy Utilities Face an Unprecedented Transition</h2>
+    <p>The energy sector is undergoing its most significant transformation in a century — shifting from centralized fossil fuel generation to distributed renewable sources, while managing ageing grid infrastructure and growing consumer expectations. Singular's IoT and private 5G platform provides the intelligent foundation for the modern utility — enabling smarter grids, faster fault response, and seamless renewable integration.</p>
+    <ul class="feat-list"><li>Real-time grid monitoring and fault detection across the network</li><li>Renewable energy integration and distributed resource management</li><li>Smart metering and demand response programme management</li><li>Asset lifecycle management and predictive maintenance</li></ul>
+  </div>
+</div>
 
-    <link rel="stylesheet" href="css/ionicons.min.css">
+<div class="split rev">
+  <div class="split-img"><img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1000&q=80" alt="Solar Energy Farm"/><div class="split-img-ov"></div></div>
+  <div class="split-cnt dark fu">
+    <span class="section-label">Our Approach</span>
+    <h2>Intelligent Grid Management for the Energy Transition</h2>
+    <p style="color:rgba(255,255,255,.6)">Our platform connects every grid asset — from transmission towers to distribution transformers, from renewable generation sites to customer smart meters — into a single intelligent network. Machine learning algorithms continuously optimize grid operation, predict demand, and detect anomalies before they become outages.</p>
+    <ul class="feat-list"><li>End-to-end grid visibility from generation to consumption</li><li>AI-powered load forecasting and demand response automation</li><li>Real-time fault detection and automated switching for faster restoration</li><li>SCADA integration with enriched IoT analytics layer</li></ul>
+  </div>
+</div>
 
-    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
-    <link rel="stylesheet" href="css/jquery.timepicker.css">
-
-    
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/icomoon.css">
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
-	  
-    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-	    <div class="container">
-	      <a class="navbar-brand" href="index.html"><span>Singular</span></a>
-	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span> Menu
-	      </button>
-
-	      <div class="collapse navbar-collapse" id="">
-	        <ul class="navbar-nav nav ml-auto">
-	          <li class="nav-item"><a href="index.html" class="nav-link" data-nav-section="home"><span>Home</span></a></li>
-	          <li class="nav-item cta"><a href="https://share-eu1.hsforms.com/1fZx1K1zdS-iMJJclshb99w2ewkpq" class="nav-link">Contact Us</a></li>
-
-	        </ul>
-	      </div>
-	    </div>
-	  </nav>
-    
-    <section class="hero-wrap hero-wrap-2" style="background-image: url('images/energy.jpg');" data-stellar-background-ratio="0.5">
-      <div class="overlay"></div>
-      <div class="container">
-        <div class="row no-gutters slider-text align-items-end justify-content-center">
-          <div class="col-md-9 ftco-animate pb-5 text-center">
-            <h1 class="mb-3 bread">Utilities & Energy Industry</h1>
-            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Utilities & Energy<i ></i></span></p>
-          </div>
-        </div>
+<section>
+  <div class="container">
+    <div style="max-width:600px"><span class="section-label">Our Solutions</span><h2 class="section-heading">Purpose-Built for Utilities</h2><p class="section-sub">We deploy a suite of integrated IoT and connectivity solutions tailored to the unique demands of utilities operations.</p></div>
+    <div class="sol-grid">
+      <div class="sol-card fu">
+        <div class="sol-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+        <h3>Smart Grid Monitoring</h3>
+        <p>Continuous monitoring of grid voltage, current, power quality, and load across your entire distribution network — with AI anomaly detection identifying faults before customers lose power.</p>
       </div>
-    </section>
-		
-
-		<section class="ftco-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 order-lg-last ftco-animate">
-            <h2 class="mb-3">Powering the Future: Smart Technology in Utilities</h2>
-            <p>The utilities sector is undergoing a digital transformation, driven by the need for efficiency, sustainability, and resilience. By integrating IoT, AI, and private 5G networks, utility providers can optimize operations, reduce waste, and enhance service delivery, ensuring reliable access to energy, water, and essential resources.</p>
-            <p>
-              <img src="images/power.jpg" alt="" class="img-fluid">
-            </p>
-            <p>Smart grids and IoT-enabled monitoring systems allow real-time tracking of electricity, gas, and water usage. With advanced sensors and AI-driven analytics, providers can detect faults, predict maintenance needs, and prevent costly outages. Automated demand response systems adjust energy distribution based on real-time consumption data, improving efficiency and reducing strain on the grid.</p>
-            <p>Private 5G networks offer secure, high-speed connectivity for remote monitoring and automation. From smart meters that provide instant usage data to AI-powered leak detection in water systems, these technologies minimize resource waste while enhancing operational control. In the energy sector, predictive maintenance helps extend the lifespan of power infrastructure, reducing downtime and ensuring continuous service.</p>
-            <p>
-              <img src="images/utils.jpg" alt="" class="img-fluid">
-            </p>
-            <p>Sustainability is at the core of modern utility management. Renewable energy integration, such as solar and wind, becomes more efficient with AI-driven forecasting and real-time grid balancing. Smart water management systems detect leaks and optimize distribution, conserving vital resources while reducing costs. With intelligent analytics, utility companies can make data-driven decisions to enhance efficiency and meet regulatory requirements.</p>
-            <p>By embracing digital transformation, utility providers can improve reliability, reduce environmental impact, and build a smarter, more sustainable future. The next era of utilities is connected, intelligent, and ready to power the world more efficiently than ever before.</p>
-            <div class="tag-widget post-tag-container mb-5 mt-5">
-              <div class="tagcloud">
-                <a href="#" class="tag-cloud-link">Utilities</a>
-                <a href="#" class="tag-cloud-link">IoT</a>
-                <a href="#" class="tag-cloud-link">5G</a>
-                <a href="#" class="tag-cloud-link">Transformation</a>
-              </div>
-            </div>
-
-
-           
-
-          </div> <!-- .col-md-8 -->
-        </div>
+      <div class="sol-card fu">
+        <div class="sol-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8v4l3 3M12 2a10 10 0 100 20 10 10 0 000-20z"/></svg></div>
+        <h3>Asset Management IoT</h3>
+        <p>IoT sensors on transformers, switchgear, cables, and other critical assets continuously monitor health indicators — enabling predictive maintenance and extending asset lifetimes.</p>
       </div>
-    </section> <!-- .section -->
-		
-
-      <footer class="ftco-footer ftco-section">
-      <div class="container">
-        <div class="row mb-5">
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">TheeSingular</h2>
-              <p>Unleash the Future for Seamless Connectivity and Smart Possibilities</p>
-              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
-                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md">
-             <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Industries</h2>
-              <ul class="list-unstyled">
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Mining</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Telecomms</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Manufacturing</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Smart Cities</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Utilities</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4">
-            	<h2 class="ftco-heading-2">Have a Questions?</h2>
-            	<div class="block-23 mb-3">
-	              <ul>
-	                <li><span class="icon icon-map-marker"></span><span class="text">105 Metropolis On Park, 118 Pretoria Avenue,Sandton, Johannesburg South Africa</span></li>
-	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@theesingular.com</span></a></li>
-	              </ul>
-	            </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12 text-center">
-
-            <p>
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | TheeSingular </a>
-</p>
-          </div>
-        </div>
+      <div class="sol-card fu">
+        <div class="sol-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v1M12 21v1M4.22 4.22l.7.7M18.36 18.36l.7.7M1 12h2M21 12h2"/></svg></div>
+        <h3>Renewable Integration</h3>
+        <p>Intelligent monitoring and control of distributed renewable generation — solar, wind, and battery storage — enabling seamless grid integration and optimized dispatch decisions.</p>
       </div>
-    </footer>
-  
+      <div class="sol-card fu">
+        <div class="sol-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h18v18H3zM3 9h18M9 21V9"/></svg></div>
+        <h3>Smart Metering</h3>
+        <p>Advanced metering infrastructure with real-time consumption data, tamper detection, and remote disconnection — enabling accurate billing, demand response, and customer engagement programmes.</p>
+      </div>
+      <div class="sol-card fu">
+        <div class="sol-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+        <h3>Private 5G Grid Network</h3>
+        <p>Dedicated private 5G communications network for your grid assets — providing the reliability, security, and low latency required for critical infrastructure control without dependence on public networks.</p>
+      </div>
+      <div class="sol-card fu">
+        <div class="sol-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/></svg></div>
+        <h3>Outage Management</h3>
+        <p>Automated outage detection, crew dispatch, and customer communication — reducing mean time to restore (MTTR) and improving regulatory compliance with outage reporting requirements.</p>
+      </div></div>
+  </div>
+</section>
 
-  <!-- loader -->
-  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+<div class="img-banner">
+  <div class="ib-bg"><img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=1600&q=80" alt="Utilities at Scale"/></div>
+  <div class="ib-ov"></div>
+  <div class="ib-content"><div class="ib-inner fu"><span class="section-label" style="color:#93C5FD">Real-World Impact</span><h2>Powering the Energy Transition with Intelligence</h2><p>Utilities deploying our platform lead the transition to smarter, cleaner energy — reducing losses, improving reliability, and delivering the digital grid their customers expect.</p><a href="contact.html" class="btn-white">Discuss Your Project</a></div></div>
+</div>
 
+<section style="background:#F7F8FA">
+  <div class="container">
+    <div style="text-align:center;max-width:600px;margin:0 auto"><span class="section-label">Proven Outcomes</span><h2 class="section-heading">Results Our Clients See</h2></div>
+    <div class="outcomes-grid" style="margin-top:48px"><div class="oc-item fu"><span class="oc-num">25%</span><div class="oc-label">Reduction in Grid Losses</div></div><div class="oc-item fu"><span class="oc-num">60%</span><div class="oc-label">Faster Fault Detection</div></div><div class="oc-item fu"><span class="oc-num">40%</span><div class="oc-label">Reduction in Field Visit Costs</div></div><div class="oc-item fu"><span class="oc-num">30%</span><div class="oc-label">Improvement in Renewable Integration</div></div></div>
+  </div>
+</section>
 
-  <script src="js/jquery.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.easing.1.3.js"></script>
-  <script src="js/jquery.waypoints.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/aos.js"></script>
-  <script src="js/jquery.animateNumber.min.js"></script>
-  <script src="js/bootstrap-datepicker.js"></script>
-  <script src="js/scrollax.min.js"></script>
-  <script src="js/google-map.js"></script>
-  <script src="js/main.js"></script>
-    
-  </body>
+<section>
+  <div class="container">
+    <span class="section-label">Related Industries</span>
+    <h2 class="section-heading">Explore More Solutions</h2>
+    <div class="rel-grid">
+      <a href="smart-cities.html" class="rel-card fu">
+        <div class="rel-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 7h7v15H2zM9 2h6v20H9zM15 10h7v12h-7z"/></svg></div>
+        <div><h4>Smart Cities</h4><span>Connected urban infrastructure</span></div>
+      </a>
+      <a href="manufacturing.html" class="rel-card fu">
+        <div class="rel-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 7h20v14H2zM16 7V5a2 2 0 00-4 0v2"/></svg></div>
+        <div><h4>Manufacturing</h4><span>Industrial IoT &amp; efficiency</span></div>
+      </a>
+      <a href="mining.html" class="rel-card fu">
+        <div class="rel-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2zM9 22V12h6v10"/></svg></div>
+        <div><h4>Mining</h4><span>Remote site connectivity</span></div>
+      </a></div>
+  </div>
+</section>
+
+<div class="cta-band">
+  <div class="cta-inner fu">
+    <h2>Ready to Transform Your Utilities Operations?</h2>
+    <p>Talk to our team about a tailored IoT and private 5G solution for your organisation.</p>
+    <div class="cta-actions"><a href="contact.html" class="btn-white">Get In Touch</a><a href="index.html#industries" class="btn-ghost-white">View All Industries</a></div>
+  </div>
+</div>
+
+<footer>
+  <div class="ft-top">
+    <div class="ft-brand"><img src="images/image008.png" alt="The Singular"/><p>Unleash the Future for Seamless Connectivity and Smart Possibilities. Purpose-driven networks for the fourth industrial revolution.</p><div class="ft-socials"><a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a><a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg></a><a href="mailto:info@theesingular.com" aria-label="Email"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a></div></div>
+    <div class="ft-col"><h5>Industries</h5><ul><li><a href="mining.html">Mining</a></li><li><a href="telecom.html">Telecommunications</a></li><li><a href="manufacturing.html">Manufacturing</a></li><li><a href="smart-cities.html">Smart Cities</a></li><li><a href="utilities.html">Utilities &amp; Energy</a></li><li><a href="healthcare.html">Healthcare</a></li></ul></div>
+    <div class="ft-col"><h5>Company</h5><ul><li><a href="about.html">About Us</a></li><li><a href="about.html#mission">Our Mission</a></li><li><a href="about.html#team">Our Team</a></li><li><a href="index.html#blog">Insights</a></li></ul></div>
+    <div class="ft-col"><h5>Contact</h5><ul><li><a href="tel:+27832838471">+27 83 283 8471</a></li><li><a href="mailto:info@theesingular.com">info@theesingular.com</a></li><li><a href="contact.html">Sandton, Johannesburg</a></li><li><a href="contact.html">Get In Touch</a></li></ul></div>
+  </div>
+  <div class="ft-bottom"><p>© 2026 TheeSingular. All rights reserved.</p><div class="ft-links"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a></div></div>
+</footer>
+<script src="js/site.js"></script>
+</body>
 </html>
