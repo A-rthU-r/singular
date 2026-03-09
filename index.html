@@ -1,499 +1,334 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="icon" type="image/jpeg" href="images/sing.jpeg">
-    <title>The Singular - Purpose Driven Networks</title>
-	  
-    <meta charset="utf-8">
-    <link rel="icon" type="image/png" href="images/sing.png">
-    <title>The Singular - Purpose Driven Networks</title>
-    <link rel="icon" type="image/jpeg" href="images/sing.jpeg">
-    <title>The Singular - Purpose Driven Networks</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900" rel="stylesheet">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>The Singular — Purpose Driven Networks</title>
+<meta name="description" content="The Singular redefines digital connectivity through innovative IoT, AI, and private 5G network solutions that empower businesses and transform communities worldwide."/>
+<link rel="stylesheet" href="css/main.css"/>
+<style>
+/* ── HERO ── */
+.hero{min-height:100vh;padding-top:68px;background:linear-gradient(135deg,#0A1628 0%,#0D2250 55%,#0A1628 100%);display:flex;align-items:center;position:relative;overflow:hidden}
+.h-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(59,130,246,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(59,130,246,.07) 1px,transparent 1px);background-size:60px 60px}
+.h-glow{position:absolute;width:600px;height:600px;border-radius:50%;filter:blur(120px);background:radial-gradient(circle,rgba(59,130,246,.22) 0%,transparent 70%);top:-100px;right:-100px;pointer-events:none}
+.h-glow2{position:absolute;width:400px;height:400px;border-radius:50%;filter:blur(100px);background:radial-gradient(circle,rgba(59,130,246,.12) 0%,transparent 70%);bottom:60px;left:5%;pointer-events:none}
+.h-inner{max-width:1200px;margin:0 auto;padding:100px 24px 80px;position:relative;z-index:2}
+.h-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(59,130,246,.15);border:1px solid rgba(59,130,246,.3);color:#93C5FD;font-family:'Syne',sans-serif;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:6px 14px;border-radius:100px;margin-bottom:28px}
+.h-tag::before{content:'';width:6px;height:6px;border-radius:50%;background:#3B82F6;box-shadow:0 0 10px #3B82F6}
+.hero h1{font-family:'Syne',sans-serif;font-size:clamp(42px,6vw,78px);font-weight:800;line-height:1.07;color:#fff;max-width:800px;margin-bottom:24px;letter-spacing:-.025em}
+.hero h1 span{color:#93C5FD}
+.hero .h-sub{font-size:18px;line-height:1.75;color:rgba(255,255,255,.6);max-width:560px;margin-bottom:44px;font-weight:300}
+.h-actions{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.h-stats{display:flex;gap:56px;margin-top:80px;padding-top:40px;border-top:1px solid rgba(255,255,255,.1);flex-wrap:wrap}
+.hs-num{font-family:'Syne',sans-serif;font-size:36px;font-weight:800;color:#fff;line-height:1}
+.hs-label{font-size:13px;color:rgba(255,255,255,.4);margin-top:6px;line-height:1.45}
+/* ── ABOUT ── */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.av{position:relative;border-radius:16px;overflow:hidden}
+.av img{width:100%;height:520px;object-fit:cover;border-radius:16px;display:block}
+.av-badge{position:absolute;bottom:28px;left:28px;background:#fff;border-radius:12px;padding:16px 20px;box-shadow:0 12px 40px rgba(0,0,0,.1);display:flex;align-items:center;gap:12px}
+.av-badge-icon{width:40px;height:40px;background:#EFF6FF;border-radius:8px;display:flex;align-items:center;justify-content:center}
+.av-badge-icon svg{width:20px;height:20px;stroke:#3B82F6;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.av-badge strong{font-family:'Syne',sans-serif;font-size:20px;font-weight:800;color:#0D1117;display:block;line-height:1}
+.av-badge em{font-size:11px;color:#9CA3AF;margin-top:3px;display:block;font-style:normal}
+.af-list{margin-top:36px;display:flex;flex-direction:column;gap:24px}
+.af{display:flex;gap:16px;align-items:flex-start}
+.af-icon{width:44px;height:44px;min-width:44px;background:#EFF6FF;border-radius:10px;display:flex;align-items:center;justify-content:center}
+.af-icon svg{width:20px;height:20px;stroke:#3B82F6;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.af h4{font-family:'Syne',sans-serif;font-size:15px;font-weight:700;color:#0D1117;margin-bottom:4px}
+.af p{font-size:14px;color:#4B5563;line-height:1.65}
+/* ── WHY ── */
+.why-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:80px;align-items:start}
+.why-vis{background:linear-gradient(135deg,#0A1628,#0D2250);border-radius:20px;padding:48px;position:relative;overflow:hidden}
+.wv-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(59,130,246,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(59,130,246,.08) 1px,transparent 1px);background-size:40px 40px}
+.wv-inner{position:relative;z-index:1}
+.wv-inner h3{font-family:'Syne',sans-serif;font-size:26px;font-weight:800;color:#fff;line-height:1.25;margin-bottom:16px}
+.wv-inner p{font-size:15px;color:rgba(255,255,255,.55);line-height:1.6}
+.wv-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}
+.wv-tag{background:rgba(59,130,246,.15);border:1px solid rgba(59,130,246,.25);color:#93C5FD;font-family:'Syne',sans-serif;font-size:11px;font-weight:600;letter-spacing:.05em;padding:5px 12px;border-radius:100px}
+.wv-dots{display:flex;gap:8px;margin-top:32px}
+.wv-dots span{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.15)}
+.wv-dots span:first-child{background:#3B82F6;width:28px;border-radius:4px}
+/* ── BLOG ── */
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.blog-card{border:1px solid #E4E7EC;border-radius:12px;overflow:hidden;color:inherit;transition:all .25s cubic-bezier(.4,0,.2,1);background:#fff}
+.blog-card:hover{box-shadow:0 4px 16px rgba(0,0,0,.08);transform:translateY(-3px);border-color:rgba(59,130,246,.2)}
+.bc-img-ph{width:100%;height:200px;background:linear-gradient(135deg,#0A1628,#1D4ED8);display:flex;align-items:center;justify-content:center}
+.bc-img-ph svg{width:36px;height:36px;stroke:rgba(255,255,255,.25);fill:none;stroke-width:1.5}
+.bc-body{padding:24px}
+.bc-tag{font-family:'Syne',sans-serif;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#3B82F6;margin-bottom:10px;display:block}
+.blog-card h3{font-family:'Syne',sans-serif;font-size:16px;font-weight:700;color:#0D1117;line-height:1.4;margin-bottom:10px}
+.blog-card p{font-size:13px;color:#4B5563;line-height:1.6}
+.bc-foot{padding:14px 24px;border-top:1px solid #E4E7EC;display:flex;justify-content:space-between;align-items:center}
+.bc-author{font-size:12px;color:#9CA3AF}
+.bc-read{font-family:'Syne',sans-serif;font-size:12px;font-weight:600;color:#3B82F6}
+/* ── CONTACT STRIP ── */
+.ct-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:80px;align-items:start}
+.ct-info h2{font-family:'Syne',sans-serif;font-size:clamp(28px,3.5vw,40px);font-weight:800;color:#0D1117;margin-bottom:16px;letter-spacing:-.02em}
+.ct-info>p{font-size:16px;color:#4B5563;line-height:1.75;margin-bottom:36px}
+.ct-details{display:flex;flex-direction:column;gap:16px}
+.ct-detail{display:flex;gap:14px;align-items:flex-start}
+.ct-di{width:42px;height:42px;min-width:42px;background:#EFF6FF;border-radius:10px;display:flex;align-items:center;justify-content:center}
+.ct-di svg{width:18px;height:18px;stroke:#3B82F6;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.ct-detail strong{font-family:'Syne',sans-serif;font-size:11px;font-weight:700;color:#0D1117;display:block;margin-bottom:2px;text-transform:uppercase;letter-spacing:.05em}
+.ct-detail span,.ct-detail a{font-size:14px;color:#4B5563;text-decoration:none}
+.ct-detail a:hover{color:#3B82F6}
+.hs-card{background:#F7F8FA;border:1px solid #E4E7EC;border-radius:16px;padding:40px}
+.hs-card h3{font-family:'Syne',sans-serif;font-size:20px;font-weight:800;color:#0D1117;margin-bottom:6px}
+.hs-card>p{font-size:14px;color:#4B5563;margin-bottom:28px;line-height:1.6}
+#hs-idx-container{min-height:60px}
+.hs-fb{display:none}
+/* ── RESPONSIVE ── */
+@media(max-width:1024px){.about-grid,.why-grid,.ct-grid{grid-template-columns:1fr;gap:48px}}
+@media(max-width:768px){.h-stats{gap:28px}.blog-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
 
-    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="css/animate.css">
-    
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
-
-    <link rel="stylesheet" href="css/aos.css">
-
-    <link rel="stylesheet" href="css/ionicons.min.css">
-    
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/icomoon.css">
-    <link rel="stylesheet" href="css/style.css">
-
-  </head>
-  <body>
-	  
-    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-	    <div class="container">
-	     <a class="navbar-brand" href="index.html">
-  		<img src="images/image008.png" alt="The Singular Logo" class="logo">
-	    </a>
-	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span> Menu
-	      </button>
-
-	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav nav ml-auto">
-	          <li class="nav-item"><a href="#" class="nav-link" data-nav-section="home"><span>Home</span></a></li>
-	          <li class="nav-item"><a href="#" class="nav-link" data-nav-section="about"><span>About</span></a></li>
-	          <li class="nav-item"><a href="#" class="nav-link" data-nav-section="projects"><span>Industries</span></a></li>
-	          <li class="nav-item cta"><a href="https://share-eu1.hsforms.com/1fZx1K1zdS-iMJJclshb99w2ewkpq" class="nav-link">Contact Us</a></li>
-
-	        </ul>
-	      </div>
-	    </div>
-	  </nav>
-    
-    <section class="hero-wrap js-fullheight" style="background-image: url('images/bg_1.jpg');" data-section="home">
-      <div class="overlay"></div>
-      <div class="container">
-        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start" data-scrollax-parent="true">
-          <div class="col-md-8 ftco-animate mt-5" data-scrollax=" properties: { translateY: '70%' }">
-          	<p class="d-flex align-items-center" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">
-							<a href="https://youtu.be/1VhO4yGAjyo?si=coEKao1KmzAWmU-k">
-    						<span class="ion-ios-play play mr-2"></span>
-    						<span class="watch">Watch Video</span>
-    					</a>
-						</p>
-            <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Empowering Global Progress through Advanced Digital Transformation</h1>
-            <p class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">At Singular, we redefine digital connectivity through innovative technology solutions that empower businesses and transform communities worldwide.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-		
-		<section class="ftco-section ftco-services ftco-no-pt">
-      <div class="container">
-        <div class="row services-section">
-          <div class="col-md-4 d-flex align-self-stretch ftco-animate">
-            <div class="media block-6 services text-center d-block">
-              <div class="icon"><span class="flaticon-layers"></span></div>
-              <div class="media-body">
-                <h3 class="heading mb-3">Perfectly Designed</h3>
-                <p>We craft each solution with meticulous attention to detail, ensuring it resonates with your brand and goals. Our approach balances creativity, innovation, and usability for a seamless user experience.</p>
-                <p><a href="https://share-eu1.hsforms.com/1fZx1K1zdS-iMJJclshb99w2ewkpq" class="btn btn-primary">Get In Touch</a></p>
-	      </div>
-            </div>      
-          </div>
-          <div class="col-md-4 d-flex align-self-stretch ftco-animate">
-            <div class="media block-6 services text-center d-block">
-              <div class="icon"><span class="flaticon-compass-symbol"></span></div>
-              <div class="media-body">
-                <h3 class="heading mb-3">Carefully Planned</h3>
-                <p>Every project begins with a thorough strategy and roadmap. By analyzing requirements and anticipating challenges, we lay the groundwork for efficient, on-time delivery.</p
-                 <p><a href="https://share-eu1.hsforms.com/1fZx1K1zdS-iMJJclshb99w2ewkpq" class="btn btn-primary">Get In Touch</a></p>
-	      </div>
-            </div>    
-          </div>
-          <div class="col-md-4 d-flex align-self-stretch ftco-animate">
-            <div class="media block-6 services text-center d-block">
-              <div class="icon"><span class="flaticon-layers"></span></div>
-              <div class="media-body">
-                <h3 class="heading mb-3">Smartly Executed</h3>
-                <p>Our expert team transforms your vision into reality using the latest technologies and best practices. We prioritize precision, scalability, and future-readiness to ensure lasting success.</p>
-                <p><a href="https://share-eu1.hsforms.com/1fZx1K1zdS-iMJJclshb99w2ewkpq" class="btn btn-primary">Get In Touch</a></p>
-	      </div>
-            </div>      
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="ftco-counter img ftco-section ftco-no-pt ftco-no-pb" id="section-counter" data-section="about">
-    	<div class="container">
-    		<div class="row d-flex">
-    			<div class="col-md-6 col-lg-4 d-flex">
-    				<div class="img d-flex align-self-stretch align-items-center" style="background-image:url(images/about.jpg);">
-    					<div class="request-quote py-5">
-	    					<div class="py-2">
-	    						<span class="subheading">Be Part of the fourth industrial revolution</span>
-	    						<h3>Contact Us Today</h3>
-	    					</div>
-	    					<div class="request-form ftco-animate">
-					    <div id="hubspot-form-2"></div>
-					</div>
-					
-					<script charset="utf-8" type="text/javascript" src="//js-eu1.hsforms.net/forms/embed/v2.js"></script>
-					<script>
-					  hbspt.forms.create({
-					    portalId: "145966814",
-					    formId: "7d9c752b-5cdd-4be8-8c24-9725b216fdf7",
-					    region: "eu1",
-					    target: "#hubspot-form-2"
-					  });
-					</script>
-
-	    				</div>
-    				</div>
-    			</div>
-    			<div class="col-md-6 col-lg-8 pl-lg-5 py-5">
-    				<div class="row justify-content-start pb-3">
-		          <div class="col-md-12 heading-section ftco-animate">
-		          	<span class="subheading">Welcome</span>
-		            <h2 class="mb-4">About Us</h2>
-		            <p>Step into a new era where technology transforms every facet of your business. Imagine a world where every device speaks, every system learns, and every process is optimized automatically—creating intelligent ecosystems that drive efficiency and spark creativity.</p>
-		            <p>With IoT at its core, your operations become proactive, anticipating issues before they arise, refining processes on the fly, and delivering insights in real time. This transformation redefines success across industries, from manufacturing and healthcare to retail and smart cities.</p>
-		            <p>Enhancing this digital leap are our cutting-edge private 5G networks, offering dedicated high-speed connectivity with ultra-low latency and robust security. Together, IoT and private 5G form a powerful alliance that propels your business into a future of limitless opportunities.</p>
-		          </div>
-		        </div>
-		    		<div class="row">
-		          <div class="col-md-6 col-lg-3 justify-content-center counter-wrap ftco-animate d-flex">
-		            <div class="block-18 text-center p-4 mb-4 align-self-stretch d-flex">
-		              <div class="text">
-		                <strong class="number" data-number="480">0</strong>
-		                <span>Million Telemetry Messages Processed Annually</span>
-		              </div>
-		            </div>
-		          </div>
-		          <div class="col-md-6 col-lg-3 justify-content-center counter-wrap ftco-animate d-flex">
-		            <div class="block-18 text-center py-4 px-3 mb-4 align-self-stretch d-flex">
-		              <div class="text">
-		                <strong class="number" data-number="60">0</strong>
-		                <span>Trusted Channel Partners Worldwide</span>
-		              </div>
-		            </div>
-		          </div>
-		          <div class="col-md-6 col-lg-3 justify-content-center counter-wrap ftco-animate d-flex">
-		            <div class="block-18 text-center py-4 px-3 mb-4 align-self-stretch d-flex">
-		              <div class="text">
-		                <strong class="number" data-number="57">0</strong>
-		                <span>Percent Operational Cost Reduction</span>
-		              </div>
-		            </div>
-		          </div>
-		          <div class="col-md-6 col-lg-3 justify-content-center counter-wrap ftco-animate d-flex">
-		            <div class="block-18 text-center py-4 px-3 mb-4 align-self-stretch d-flex">
-		              <div class="text">
-		                <strong class="number" data-number="2">0</strong>
-		                <span>Million Global Endpoints Managed</span>
-		              </div>
-		            </div>
-		          </div>
-		        </div>
-	        </div>
-        </div>
-    	</div>
-    </section>
-
-    <section class="ftco-section bg-light" data-section="industries">
-      <div class="container">
-        <div class="row justify-content-center mb-5 pb-5">
-          <div class="col-md-7 heading-section text-center ftco-animate">
-            <span class="subheading">Industries</span>
-            <h2 class="mb-4">Get To Know More About Us</h2>
-            <p>At Singular, we leverage IoT, AI, and private 5G networks to drive efficiency, security, and intelligence—empowering businesses to thrive in a connected world. Here’s how we’re making an impact:</p>
-          </div>
-        </div>
-        <div class="row d-flex">
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
-              <a href=" " class="block-20" style="background-image: url('images/mining.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-                <h3 class="heading"><a href="mining.html">Mining</a></h3>
-                <p>Optimize operations with IoT-driven automation and predictive analytics. Gain real-time insights into equipment health, worker safety, and resource management through a centralized dashboard, reducing downtime and improving efficiency.</p>
-                <div class="d-flex align-items-center mt-4 meta">
-	                <p class="mb-0"><a href="mining.html" class="btn btn-secondary">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
-              <a href=" " class="block-20" style="background-image: url('images/telco.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-                <h3 class="heading"><a href="telecom.html">Telecommunications</a></h3>
-                <p>Enhance network reliability and security with intelligent monitoring and automation. Reduce operational costs, prevent unauthorized access to cell sites, and ensure seamless connectivity with robust IoT-enabled solutions.</p>
-                <div class="d-flex align-items-center mt-4 meta">
-	                <p class="mb-0"><a href="telecom.html" class="btn btn-secondary">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry">
-              <a href=" " class="block-20" style="background-image: url('images/manufacturing.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-                <h3 class="heading"><a href="manufacturing.html">Manufacturing</a></h3>
-                <p>Streamline production with digital twins and smart automation. Detect machinery issues before failures occur, optimize workflows in real time, and improve productivity with connected manufacturing systems that eliminate inefficiencies.</p>
-                <div class="d-flex align-items-center mt-4 meta">
-	                <p class="mb-0"><a href="manufacturing.html" class="btn btn-secondary">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
-              <a href=" " class="block-20" style="background-image: url('images/smartc.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-                <h3 class="heading"><a href="smart-cities.html">Smart Cities</a></h3>
-                <p>Create smarter, more sustainable urban environments with intelligent infrastructure. From smart lighting and traffic management to enhanced public safety and waste optimization, IoT transforms city operations for efficiency and sustainability.</p>
-                <div class="d-flex align-items-center mt-4 meta">
-	                <p class="mb-0"><a href="smart-cities.html" class="btn btn-secondary">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
-              <a href=" " class="block-20" style="background-image: url('images/energy.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-                <h3 class="heading"><a href="utilities.html">Utilities & Energy</a></h3>
-                <p>Modernize energy distribution with advanced IoT and private 5G networks. Monitor power grids, reduce energy waste, and detect faults in real time, ensuring seamless and cost-effective utility management.</p>
-                <div class="d-flex align-items-center mt-4 meta">
-	                <p class="mb-0"><a href="utilities.html" class="btn btn-secondary">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry">
-              <a href=" " class="block-20" style="background-image: url('images/health.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-                <h3 class="heading"><a href="healthcare.html">Healthcare</a></h3>
-                <p>Revolutionize patient care with real-time health monitoring, predictive analytics, and connected medical devices. Enable hospitals and clinics to improve diagnostics, streamline operations, and enhance patient outcomes through smart technology.</p>
-                <div class="d-flex align-items-center mt-4 meta">
-	                <p class="mb-0"><a href="healthcare.html" class="btn btn-secondary">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-   <section class="ftco-section contact-section ftco-no-pb" data-section="contact">
-    <div class="container">
-        <div class="row justify-content-center mb-5 pb-3">
-            <div class="col-md-7 heading-section text-center ftco-animate">
-                <span class="subheading">Contact</span>
-                <h2 class="mb-4">Contact Us</h2>
-            </div>
-        </div>
-        <div class="row no-gutters block-9">
-            <!-- Contact Form -->
-            <div class="col-md-6 order-md-last d-flex">
-    <div id="hubspot-form" class="bg-light p-5 contact-form"></div>
+<!-- NAV -->
+<nav id="ts-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="images/image008.png" alt="The Singular"/></a>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="index.html#industries">Industries</a></li>
+      <li><a href="index.html#why">Why Singular</a></li>
+      <li><a href="index.html#blog">Insights</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="contact.html" class="nav-cta">Get In Touch</a></li>
+    </ul>
+    <button class="nav-burger" id="ts-burger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="mobile-nav" id="ts-mobile-nav">
+  <a href="about.html">About</a>
+  <a href="index.html#industries">Industries</a>
+  <a href="index.html#why">Why Singular</a>
+  <a href="index.html#blog">Insights</a>
+  <a href="contact.html">Contact</a>
+  <a href="contact.html">Get In Touch →</a>
 </div>
 
-<script charset="utf-8" type="text/javascript" src="//js-eu1.hsforms.net/forms/embed/v2.js"></script>
-<script>
-  hbspt.forms.create({
-    portalId: "145966814",
-    formId: "7d9c752b-5cdd-4be8-8c24-9725b216fdf7",
-    region: "eu1",
-    target: "#hubspot-form"
-  });
-</script>
-
-
-            <!-- Google Map -->
-            <div class="col-md-6 d-flex">
-               <div style="width: 100%; height: 100%; background-color: white;">
-		    <iframe 
-		        width="100%" 
-		        height="100%" 
-		        style="border: 0; display: block;"
-		        loading="lazy" 
-		        allowfullscreen 
-		        referrerpolicy="no-referrer-when-downgrade"
-		        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3582.780057948967!2d28.052373776450405!3d-26.10613857710785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950d071e0a391f%3A0xb30a96f8b6174854!2sMetropolis%20On%20Park!5e0!3m2!1sen!2sza!4v1711812345678">
-		    </iframe>
-		</div>
-            </div>
-        </div>
+<!-- HERO -->
+<section class="hero">
+  <div class="h-grid"></div><div class="h-glow"></div><div class="h-glow2"></div>
+  <div class="h-inner">
+    <div class="h-tag">Purpose Driven Networks</div>
+    <h1>Empowering Global Progress through <span>Advanced Digital Transformation</span></h1>
+    <p class="h-sub">We redefine digital connectivity through innovative IoT, AI, and private 5G network solutions that empower businesses and transform communities worldwide.</p>
+    <div class="h-actions">
+      <a href="#industries" class="btn-primary">Explore Industries <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      <a href="contact.html" class="btn-ghost-white">Contact Us</a>
     </div>
+    <div class="h-stats">
+      <div><div class="hs-num">500M+</div><div class="hs-label">Telemetry Messages<br>Processed Annually</div></div>
+      <div><div class="hs-num">200+</div><div class="hs-label">Trusted Channel<br>Partners Worldwide</div></div>
+      <div><div class="hs-num">40%</div><div class="hs-label">Operational Cost<br>Reduction</div></div>
+      <div><div class="hs-num">10M+</div><div class="hs-label">Global Endpoints<br>Managed</div></div>
+    </div>
+  </div>
 </section>
 
-	      <section class="ftco-section bg-light" data-section="blog">
-      <div class="container">
-        <div class="row justify-content-center mb-5 pb-5">
-          <div class="col-md-7 heading-section text-center ftco-animate">
-            <span class="subheading">Blog</span>
-            <h2 class="mb-4">Read Relevant Stories</h2>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
-          </div>
-        </div>
-        <div class="row d-flex">
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
-              <a href="single.html" class="block-20" style="background-image: url('images/ryan.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-                <h3 class="heading"><a href="single.html">From shelf to sale: How IoT solutions keep retail fresh</a></h3>
-                <p>IoT solutions are providing the retail industry with powerful tools to navigate the challenges of modern commerce.</p>
-                <div class="d-flex align-items-center mt-4 meta">
-	                <p class="mb-0"><a href="https://iottechnews.com/news/from-shelf-to-sale-how-iot-solutions-keep-retail-fresh/" class="btn btn-secondary">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
-	                <p class="ml-auto mb-0">
-	                	<a href="#" class="mr-2">Ryan Daws</a>
-	                </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
-              <a href="single.html" class="block-20" style="background-image: url('images/mining.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-                <h3 class="heading"><a href="single.html">Can AI enhance mining’s collision avoidance technology?</a></h3>
-                <p> it is still difficult to say exactly how many mine vehicle collisions occur globally each year.</p>
-                <div class="d-flex align-items-center mt-4 meta">
-	                <p class="mb-0"><a href="https://www.mining-technology.com/features/can-ai-enhance-minings-collision-avoidance-technology/" class="btn btn-secondary">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
-	                <p class="ml-auto mb-0">
-	                	<a href="#" class="mr-2">Andrew Tunnicliffe</a>
-	                </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry">
-              <a href="single.html" class="block-20" style="background-image: url('images/transformation.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-                <h3 class="heading"><a href="single.html">mining 2040:Tech trends shaping the future of african mining</a></h3>
-                <div class="d-flex align-items-center mt-4 meta">
-	                <p class="mb-0"><a href="https://www.miningreview.com/tech-news/mining-2040-tech-trends-shaping-the-future-of-african-mining/" class="btn btn-secondary">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
-	                <p class="ml-auto mb-0">
-	                	<a href="#" class="mr-2">Mining Review Africa</a>
-	                </p>
-                </div>
-              </div>
-            </div>
-          </div>
+<!-- ABOUT -->
+<section id="about" style="background:#fff">
+  <div class="container">
+    <div class="about-grid">
+      <div class="av fu">
+        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=900&q=80" alt="Connected Network Infrastructure"/>
+        <div class="av-badge">
+          <div class="av-badge-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg></div>
+          <div><strong>IoT + 5G</strong><em>4th Industrial Revolution</em></div>
         </div>
       </div>
-    </section>
+      <div class="fu">
+        <span class="section-label">About Us</span>
+        <h2 class="section-heading">Intelligent Ecosystems for a Connected World</h2>
+        <p class="section-sub">Step into a new era where every device speaks, every system learns, and every process is optimized automatically — creating intelligent ecosystems that drive efficiency and spark creativity.</p>
+        <div class="af-list">
+          <div class="af"><div class="af-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div><div><h4>Perfectly Designed</h4><p>We craft each solution with meticulous attention to detail, balancing creativity, innovation, and usability for a seamless experience.</p></div></div>
+          <div class="af"><div class="af-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div><div><h4>Carefully Planned</h4><p>Every project begins with a thorough strategy and roadmap — analyzing requirements and anticipating challenges for on-time delivery.</p></div></div>
+          <div class="af"><div class="af-icon"><svg viewBox="0 0 24 24"><polyline points="13 2 13 9 20 9"/><polygon points="13 2 20 9 20 22 4 22 4 2 13 2"/></svg></div><div><h4>Smartly Executed</h4><p>Our expert team transforms your vision using the latest technologies, prioritizing precision, scalability, and future-readiness.</p></div></div>
+        </div>
+        <div style="margin-top:36px"><a href="about.html" class="btn-primary">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <section class="ftco-section contact-section">
-      <div class="container">
-        <div class="row d-flex contact-info">
-          <div class="col-md-6 col-lg-3 d-flex">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-map-signs"></span>
-          		</div>
-          		<h3 class="mb-4">Address</h3>
-	            <p>105 Metropolis On Park, 118 Pretoria Avenue,Sandton, Johannesburg South Africa</p>
-	          </div>
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-phone2"></span>
-          		</div>
-          		<h3 class="mb-4">Contact Number</h3>
-	            <p><a href="tel://1234567920">+27832838471</a></p>
-	          </div>
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-paper-plane"></span>
-          		</div>
-          		<h3 class="mb-4">Email Address</h3>
-	            <p><a href="mailto:info@yoursite.com">info@theesingular.com</a></p>
-	          </div>
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-globe"></span>
-          		</div>
-          		<h3 class="mb-4">Website</h3>
-	            <p><a href="#">theesingular.com</a></p>
-	          </div>
-          </div>
+<!-- SPLIT: 5G -->
+<div class="split">
+  <div class="split-img"><img src="https://images.unsplash.com/photo-1478754693441-5ba0e040edfd?auto=format&fit=crop&w=1000&q=80" alt="Private 5G Network"/><div class="split-img-ov"></div></div>
+  <div class="split-cnt fu">
+    <span class="section-label">Private 5G Networks</span>
+    <h2 class="section-heading">Enterprise-Grade Connectivity at Every Scale</h2>
+    <p>Dedicated high-speed connectivity with ultra-low latency and robust security — purpose-built for enterprise and industrial environments where reliability is non-negotiable.</p>
+    <ul class="feat-list">
+      <li>Ultra-low latency for mission-critical operations</li>
+      <li>Dedicated spectrum with no shared interference</li>
+      <li>Enterprise-grade security built in from the ground up</li>
+      <li>Seamless integration with existing infrastructure</li>
+    </ul>
+    <div style="margin-top:8px"><a href="telecom.html" class="btn-primary">Explore Connectivity <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
+  </div>
+</div>
+
+<!-- SPLIT: IoT reversed dark -->
+<div class="split rev">
+  <div class="split-img"><img src="https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?auto=format&fit=crop&w=1000&q=80" alt="IoT Smart City"/><div class="split-img-ov"></div></div>
+  <div class="split-cnt dark fu">
+    <span class="section-label">IoT Intelligence</span>
+    <h2>Real-Time Intelligence at 500 Million Data Points</h2>
+    <p>Our IoT platform processes hundreds of millions of telemetry messages annually, turning raw data streams into actionable intelligence that drives operational efficiency.</p>
+    <ul class="feat-list">
+      <li>Predictive analytics preventing failures before they occur</li>
+      <li>Real-time monitoring across 10M+ global endpoints</li>
+      <li>AI-powered dashboards for instant decision-making</li>
+      <li>Centralised visibility across your entire operation</li>
+    </ul>
+    <div style="margin-top:8px"><a href="about.html" class="btn-ghost-white">Discover Our Platform</a></div>
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="stats-band">
+  <div class="stats-grid">
+    <div class="stat-item fu"><span class="stat-num">500M+</span><div class="stat-label">Telemetry Messages<br>Processed Annually</div></div>
+    <div class="stat-item fu"><span class="stat-num">200+</span><div class="stat-label">Trusted Channel<br>Partners Worldwide</div></div>
+    <div class="stat-item fu"><span class="stat-num">40%</span><div class="stat-label">Operational Cost<br>Reduction</div></div>
+    <div class="stat-item fu"><span class="stat-num">10M+</span><div class="stat-label">Global Endpoints<br>Managed</div></div>
+  </div>
+</div>
+
+<!-- FULL BLEED BANNER -->
+<div class="img-banner">
+  <div class="ib-bg"><img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=1600&q=80" alt="Smart City"/></div>
+  <div class="ib-ov"></div>
+  <div class="ib-content">
+    <div class="ib-inner fu">
+      <span class="section-label" style="color:#93C5FD">Be Part of the Revolution</span>
+      <h2>Transforming Industries <span>Across the Globe</span></h2>
+      <p>From mining operations in remote locations to smart cities of the future — Singular powers the fourth industrial revolution with intelligent, connected infrastructure.</p>
+      <a href="contact.html" class="btn-white">Start Your Journey</a>
+      <div class="ib-stats">
+        <div><div class="ibs-num">6</div><div class="ibs-label">Key Industries</div></div>
+        <div><div class="ibs-num">4IR</div><div class="ibs-label">Technology Ready</div></div>
+        <div><div class="ibs-num">24/7</div><div class="ibs-label">Network Monitoring</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- INDUSTRIES -->
+<section id="industries">
+  <div class="container">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:52px;flex-wrap:wrap;gap:20px">
+      <div><span class="section-label">Industries</span><h2 class="section-heading">Transforming Every Sector</h2><p class="section-sub">IoT, AI, and private 5G driving efficiency, security, and intelligence across key industries.</p></div>
+    </div>
+    <div class="ind-grid">
+      <a href="mining.html" class="ind-card fu"><div class="ind-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><h3>Mining</h3><p>Optimize operations with IoT-driven automation and predictive analytics. Gain real-time insights into equipment health, worker safety, and resource management.</p><span class="ind-link">Read More <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
+      <a href="telecom.html" class="ind-card fu"><div class="ind-icon"><svg viewBox="0 0 24 24"><path d="M1.5 8.5A13 13 0 0112 4a13 13 0 0110.5 4.5"/><path d="M5 12a9.5 9.5 0 017-3 9.5 9.5 0 017 3"/><circle cx="12" cy="16" r="2"/><line x1="12" y1="18" x2="12" y2="22"/></svg></div><h3>Telecommunications</h3><p>Enhance network reliability and security with intelligent monitoring. Reduce operational costs and prevent unauthorized cell site access.</p><span class="ind-link">Read More <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
+      <a href="manufacturing.html" class="ind-card fu"><div class="ind-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg></div><h3>Manufacturing</h3><p>Streamline production with digital twins and smart automation. Detect machinery issues before failures occur and optimize workflows in real time.</p><span class="ind-link">Read More <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
+      <a href="smart-cities.html" class="ind-card fu"><div class="ind-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="7" height="15"/><rect x="9" y="2" width="6" height="20"/><rect x="15" y="10" width="7" height="12"/></svg></div><h3>Smart Cities</h3><p>Create smarter urban environments with intelligent infrastructure — from smart lighting and traffic management to enhanced public safety.</p><span class="ind-link">Read More <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
+      <a href="utilities.html" class="ind-card fu"><div class="ind-icon"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div><h3>Utilities &amp; Energy</h3><p>Modernize energy distribution with advanced IoT and private 5G. Monitor power grids, reduce energy waste, and detect faults in real time.</p><span class="ind-link">Read More <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
+      <a href="healthcare.html" class="ind-card fu"><div class="ind-icon"><svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div><h3>Healthcare</h3><p>Revolutionize patient care with real-time health monitoring, predictive analytics, and connected medical devices for improved outcomes.</p><span class="ind-link">Read More <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- WHY SINGULAR -->
+<section id="why" style="background:#F7F8FA">
+  <div class="container">
+    <div class="why-grid">
+      <div>
+        <span class="section-label">Why Singular</span>
+        <h2 class="section-heading">Built for the Fourth Industrial Revolution</h2>
+        <p class="section-sub" style="margin-bottom:36px">We combine cutting-edge technology with deep industry expertise to deliver solutions that are not just connected — but intelligent.</p>
+        <div class="acc-list acc-group">
+          <div class="acc-item open"><div class="acc-head"><h4>Private 5G Networks</h4><span class="acc-toggle">+</span></div><div class="acc-body">Dedicated high-speed connectivity with ultra-low latency and robust security — purpose-built for enterprise and industrial environments where reliability is non-negotiable.</div></div>
+          <div class="acc-item"><div class="acc-head"><h4>IoT Intelligence at Scale</h4><span class="acc-toggle">+</span></div><div class="acc-body">Our IoT platform processes hundreds of millions of telemetry messages annually, turning raw data into actionable insights that drive operational efficiency across your business.</div></div>
+          <div class="acc-item"><div class="acc-head"><h4>AI-Powered Automation</h4><span class="acc-toggle">+</span></div><div class="acc-body">Machine learning models embedded across our platform anticipate issues before they arise, enabling proactive operations and significantly reducing unplanned downtime.</div></div>
+          <div class="acc-item"><div class="acc-head"><h4>End-to-End Security</h4><span class="acc-toggle">+</span></div><div class="acc-body">From the network edge to the data center, security is built into every layer — ensuring your critical infrastructure is protected 24/7 with enterprise-grade resilience.</div></div>
         </div>
       </div>
-    </section>
-		
-
-    <footer class="ftco-footer ftco-section">
-      <div class="container">
-        <div class="row mb-5">
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">TheeSingular</h2>
-              <p>Unleash the Future for Seamless Connectivity and Smart Possibilities</p>
-              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
-                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md">
-             <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Industries</h2>
-              <ul class="list-unstyled">
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Mining</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Telecomms</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Manufacturing</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Smart Cities</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Utilities</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4">
-            	<h2 class="ftco-heading-2">Have a Questions?</h2>
-            	<div class="block-23 mb-3">
-	              <ul>
-	                <li><span class="icon icon-map-marker"></span><span class="text">105 Metropolis On Park, 118 Pretoria Avenue,Sandton, Johannesburg South Africa</span></li>
-	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@theesingular.com</span></a></li>
-	              </ul>
-	            </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12 text-center">
-
-            <p>
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | TheeSingular </a>
-</p>
-          </div>
+      <div class="why-vis fu">
+        <div class="wv-grid"></div>
+        <div class="wv-inner">
+          <h3>Unleash the Future for Seamless Connectivity and Smart Possibilities</h3>
+          <p>Together, IoT and private 5G form a powerful alliance that propels your business into a future of limitless opportunities.</p>
+          <div class="wv-tags"><span class="wv-tag">IoT</span><span class="wv-tag">Private 5G</span><span class="wv-tag">AI/ML</span><span class="wv-tag">Edge Computing</span><span class="wv-tag">Network Security</span></div>
+          <div class="wv-dots"><span></span><span></span><span></span><span></span></div>
         </div>
       </div>
-    </footer>
-    
-  
+    </div>
+  </div>
+</section>
 
-  <!-- loader -->
-  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+<!-- BLOG -->
+<section id="blog">
+  <div class="container">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:48px;flex-wrap:wrap;gap:20px">
+      <div><span class="section-label">Insights</span><h2 class="section-heading">Relevant Stories &amp; Research</h2></div>
+      <a href="single.html" class="btn-secondary">View All Insights</a>
+    </div>
+    <div class="blog-grid">
+      <a href="single.html?article=iot-retail" class="blog-card fu"><div class="bc-img-ph"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div><div class="bc-body"><span class="bc-tag">IoT · Retail</span><h3>From shelf to sale: How IoT solutions keep retail fresh</h3><p>IoT solutions are providing the retail industry with powerful tools to navigate the challenges of modern commerce.</p></div><div class="bc-foot"><span class="bc-author">Ryan Daws</span><span class="bc-read">Read More →</span></div></a>
+      <a href="single.html?article=ai-mining" class="blog-card fu"><div class="bc-img-ph"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div><div class="bc-body"><span class="bc-tag">AI · Mining</span><h3>Can AI enhance mining's collision avoidance technology?</h3><p>AI could be the answer to preventing mine vehicle collisions — one of the industry's most persistent safety challenges.</p></div><div class="bc-foot"><span class="bc-author">Andrew Tunnicliffe</span><span class="bc-read">Read More →</span></div></a>
+      <a href="single.html?article=mining-2040" class="blog-card fu"><div class="bc-img-ph"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><div class="bc-body"><span class="bc-tag">Mining · Africa</span><h3>Mining 2040: Tech trends shaping the future of African mining</h3><p>A deep dive into the technology trends set to redefine Africa's mining landscape over the next two decades.</p></div><div class="bc-foot"><span class="bc-author">Mining Review Africa</span><span class="bc-read">Read More →</span></div></a>
+    </div>
+  </div>
+</section>
 
+<!-- CONTACT STRIP -->
+<section id="contact" style="background:#F7F8FA">
+  <div class="container">
+    <div class="ct-grid">
+      <div class="ct-info fu">
+        <span class="section-label">Contact Us</span>
+        <h2>Let's Build the Future Together</h2>
+        <p>Ready to transform your operations with IoT, AI, and private 5G? Our team is here to help.</p>
+        <div class="ct-details">
+          <div class="ct-detail"><div class="ct-di"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><strong>Address</strong><span>105 Metropolis On Park, 118 Pretoria Avenue, Sandton, Johannesburg, South Africa</span></div></div>
+          <div class="ct-detail"><div class="ct-di"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.79 19.79 19.79 0 01.01 1.18a2 2 0 012-2.18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.91 7.18a16 16 0 006.91 6.91l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7a2 2 0 011.72 2.03z"/></svg></div><div><strong>Phone</strong><a href="tel:+27832838471">+27 83 283 8471</a></div></div>
+          <div class="ct-detail"><div class="ct-di"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div><strong>Email</strong><a href="mailto:info@theesingular.com">info@theesingular.com</a></div></div>
+        </div>
+        <div style="margin-top:32px"><a href="contact.html" class="btn-primary">Go to Contact Page <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
+      </div>
+      <div class="hs-card fu">
+        <h3>Send Us a Message</h3>
+        <p>Fill in the form and we'll respond within 24 hours.</p>
+        <div id="hs-idx-container"></div>
+        <div class="hs-fb" id="hs-fallback"><a href="https://share-eu1.hsforms.com/1fZx1K1zdS-iMJJclshb99w2ewkpq" target="_blank" class="btn-primary">Open Contact Form</a></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <script src="js/jquery.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.easing.1.3.js"></script>
-  <script src="js/jquery.waypoints.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/aos.js"></script>
-  <script src="js/jquery.animateNumber.min.js"></script>
-  <script src="js/scrollax.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-  <script src="js/google-map.js"></script>
-  <script src="js/main.js"></script>
-    
-  </body>
+<!-- CTA -->
+<div class="cta-band">
+  <div class="cta-inner fu">
+    <h2>Ready to Advance Your Connectivity?</h2>
+    <p>Join hundreds of organisations worldwide that trust Singular to power their digital transformation journey.</p>
+    <div class="cta-actions"><a href="contact.html" class="btn-white">Get In Touch</a><a href="#industries" class="btn-ghost-white">Explore Industries</a></div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ft-top">
+    <div class="ft-brand"><img src="images/image008.png" alt="The Singular"/><p>Unleash the Future for Seamless Connectivity and Smart Possibilities. Purpose-driven networks for the fourth industrial revolution.</p><div class="ft-socials"><a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a><a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg></a><a href="mailto:info@theesingular.com" aria-label="Email"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a></div></div>
+    <div class="ft-col"><h5>Industries</h5><ul><li><a href="mining.html">Mining</a></li><li><a href="telecom.html">Telecommunications</a></li><li><a href="manufacturing.html">Manufacturing</a></li><li><a href="smart-cities.html">Smart Cities</a></li><li><a href="utilities.html">Utilities &amp; Energy</a></li><li><a href="healthcare.html">Healthcare</a></li></ul></div>
+    <div class="ft-col"><h5>Company</h5><ul><li><a href="about.html">About Us</a></li><li><a href="about.html#mission">Our Mission</a></li><li><a href="about.html#team">Our Team</a></li><li><a href="#blog">Insights</a></li></ul></div>
+    <div class="ft-col"><h5>Contact</h5><ul><li><a href="tel:+27832838471">+27 83 283 8471</a></li><li><a href="mailto:info@theesingular.com">info@theesingular.com</a></li><li><a href="contact.html">Sandton, Johannesburg</a></li><li><a href="contact.html">Get In Touch</a></li></ul></div>
+  </div>
+  <div class="ft-bottom"><p>© 2026 TheeSingular. All rights reserved.</p><div class="ft-links"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a></div></div>
+</footer>
+
+<script src="js/site.js"></script>
+<script>
+  /* Replace YOUR_PORTAL_ID and YOUR_FORM_ID with your HubSpot values */
+  loadHubSpotForm('YOUR_PORTAL_ID','YOUR_FORM_ID','eu1','hs-idx-container');
+</script>
+</body>
 </html>
